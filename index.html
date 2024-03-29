@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cape Cod Shell-Out</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Cape Cod Shell-Out">
+    </div>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+  <div class="container">
+    <div id="category-buttons">
+      <button class="category-btn active" data-category="towns">
+        <i class="fas fa-map-marker-alt"></i> Towns
+      </button>
+      <button class="category-btn" data-category="beach">
+        <i class="fas fa-umbrella-beach"></i> Beaches
+      </button>
+      <button class="category-btn" data-category="things-to-do">
+        <i class="fas fa-hiking"></i> Things to Do
+      </button>
+    </div>
+    <div class="content">
+      <aside id="filters">
+        <div id="filter-container"></div>
+      </aside>
+      <main id="results">
+        <!-- Results will be dynamically populated here -->
+      </main>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Cape Cod Explorer. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
