@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cape Cod Shell-Out</title>
+  <title>🐟 Cape Cod: Towns, Beaches, Activities</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Favicon -->
+  <link rel="icon" href="/fish.ico" type="image/x-icon">
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Cape Cod Shell-Out">
+      <img src="logo.png" alt="">
     </div>
     <div class="search-bar">
       <input type="text" id="search" placeholder="Search...">
@@ -27,18 +29,22 @@
       <button class="category-btn" data-category="things-to-do">
         <i class="fas fa-hiking"></i> Things to Do
       </button>
+      <button class="category-btn" data-category="things-to-do">
+        <i class="fa-regular fa-face-smile"></i> Pick For Me
+      </button>
     </div>
     <div class="content">
+      
       <aside id="filters">
         <div id="filter-container"></div>
       </aside>
       <main id="results">
-        <!-- Results will be dynamically populated here -->
+        <div id="resultsContainer"></div>
       </main>
     </div>
   </div>
   <footer>
-    <p>&copy; 2024 Cape Cod Explorer. All rights reserved.</p>
+    <p>&copy; 2024 Cape Cod Shell Out. All rights reserved.</p>
   </footer>
   <script src="js/script.js"></script>
 </body>

@@ -33,27 +33,120 @@ function fetchAndDisplayResults(category, filter) {
       .catch((error) => console.error("Error fetching data:", error));
   }
 }
-
 function displayResults(towns) {
   resultsContainer.innerHTML = ""; // Clear current results
 
   if (towns.length > 0) {
-    const townGrid = document.createElement("div");
-    townGrid.classList.add("town-grid");
+    const town = towns[0];
+    const townHtml = `
+      <div class="town-container">
+        <div class="town-info">
+          <h2>${town.name}</h2>
+          <p class="town-description">${town.description}</p>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item from-boston">
+            <h3>From Boston</h3>
+            <table>
+              <tr>
+                <td>Distance:</td>
+                <td>${town.gettingThere.fromBoston.distance}</td>
+              </tr>
+              <tr>
+                <td>Off-Season:</td>
+                <td>${town.gettingThere.fromBoston.drivingTime.offSeason}</td>
+              </tr>
+              <tr>
+                <td>Summer Weekday:</td>
+                <td>${
+                  town.gettingThere.fromBoston.drivingTime.summerWeekday
+                }</td>
+              </tr>
+              <tr>
+                <td>Summer Weekend:</td>
+                <td>${
+                  town.gettingThere.fromBoston.drivingTime.summerWeekend
+                }</td>
+              </tr>
+              <tr>
+                <td>Bus:</td>
+                <td>${town.gettingThere.fromBoston.publicTransport.bus}</td>
+              </tr>
+              <tr>
+                <td>Ferry:</td>
+                <td>${town.gettingThere.fromBoston.publicTransport.ferry}</td>
+              </tr>
+            </table>
+          </div>
+          <div class="grid-item from-sagamore-bridge">
+            <h3>From Sagamore Bridge</h3>
+            <table>
+              <tr>
+                <td>Distance:</td>
+                <td>${town.gettingThere.fromSagamoreBridge.distance}</td>
+              </tr>
+              <tr>
+                <td>Off-Season:</td>
+                <td>${
+                  town.gettingThere.fromSagamoreBridge.drivingTime.offSeason
+                }</td>
+              </tr>
+              <tr>
+                <td>Summer Weekday:</td>
+                <td>${
+                  town.gettingThere.fromSagamoreBridge.drivingTime.summerWeekday
+                }</td>
+              </tr>
+              <tr>
+                <td>Summer Weekend:</td>
+                <td>${
+                  town.gettingThere.fromSagamoreBridge.drivingTime.summerWeekend
+                }</td>
+              </tr>
+            </table>
+          </div>
+          ${town.villages
+            .map(
+              (village) => `
+                <div class="grid-item village-box">
+                  <h4>${village.name}</h4>
+                  <div class="attractions">
+                    <h5>Attractions:</h5>
+                    <ul>
+                      ${village.attractions
+                        .map((attraction) => `<li>${attraction}</li>`)
+                        .join("")}
+                    </ul>
+                  </div>
+                  <div class="events">
+                    <h5>Events:</h5>
+                    <ul>
+                      ${village.events
+                        .map(
+                          (event) => `
+                            <li>
+                              <strong>${event.name}</strong>
+                              <p>${event.description}</p>
+                              <p>Date: ${event.date}</p>
+                            </li>
+                          `
+                        )
+                        .join("")}
+                    </ul>
+                  </div>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
 
-    towns.forEach((town) => {
-      const townBox = document.createElement("div");
-      townBox.classList.add("town-box");
-      townBox.innerHTML = `Town: ${town.name}`;
-      townGrid.appendChild(townBox);
-    });
-
-    resultsContainer.appendChild(townGrid);
+    resultsContainer.innerHTML = townHtml;
   } else {
     resultsContainer.innerHTML = "<p>No results found.</p>";
   }
 }
-
 function populateFilters(category) {
   filterContainer.innerHTML = "";
 
@@ -62,40 +155,40 @@ function populateFilters(category) {
     filterContainer.innerHTML = `
     <button class="filter" data-filter="greatBeaches">Great Beaches</button>
     <button class="filter" data-filter="whaleWatches">Whale Watches</button>
-    <button class="filter" data-filter="localArtScene">Local Art Scene</button>
-    <button class="filter" data-filter="easyToGetTo">Easy To Get To</button>
-    <button class="filter" data-filter="weddingVenues">Wedding Venues</button>
-    <button class="filter" data-filter="greatGolf">Great Golf</button>
-    <button class="filter" data-filter="bikePaths">Bike Paths</button>
-    <button class="filter" data-filter="lighthouses">Lighthouses</button>
-    <button class="filter" data-filter="deepSeaFishing">Deep Sea Fishing</button>
-    <button class="filter" data-filter="familyFriendly">Family Friendly</button>
-    <button class="filter" data-filter="diningOptions">Dining Options</button>
-    <button class="filter" data-filter="nightlife">Nightlife</button>
-    <button class="filter" data-filter="july4thEvents">July 4th Events</button>
-    <button class="filter" data-filter="capeBaseballLeague">Cape Baseball League</button>
-    <button class="filter" data-filter="sharkFree">Shark-Free</button>
-    <button class="filter" data-filter="massTransit">Mass Transit</button>
+    <button class="filter">Local Art Scene</button>
+    <button class="filter">Easy To Get To</button>
+    <button class="filter">Wedding Venues</button>
+    <button class="filter">Great Golf</button>
+    <button class="filter">Bike Paths</button>
+    <button class="filter">Lighthouses</button>
+    <button class="filter">Deep Sea Fishing</button>
+    <button class="filter">Family Friendly</button>
+    <button class="filter">Dining Options</button>
+    <button class="filter">Nightlife</button>
+    <button class="filter">July 4th Events</button>
+    <button class="filter">Cape Baseball Leage</button>
+    <button class="filter">Shark-Free</button>
+    <button class="filter">Mass Transit</button>
     <hr class="filter-divider">
-    <button class="filter" data-filter="upperCape">🌉 Upper Cape</button>
-    <button class="filter" data-filter="midCape">🛣️ Mid-Cape</button>
-    <button class="filter" data-filter="lowerCape">🍇 Lower Cape</button>
-    <button class="filter" data-filter="outerCape">🌊 Outer Cape</button>
-    <button class="filter" data-filter="capecodNationalSeashore">🏞️ Cape Cod National Seashore</button>
-    <button class="filter" data-filter="islands">🏝️ The Islands</button>
-    <hr class="filter-divider"> 
-    <button class="filter" data-filter="familyFriendly">👨‍👩‍👧‍👦 Family-Friendly</button> 
-    <button class="filter" data-filter="historicalSites">🏰 Historical Sites</button> 
-    <button class="filter" data-filter="artGalleries">🎨 Art Galleries</button> 
-    <button class="filter" data-filter="beachAccess">🏖️ Beach Access</button> 
-    <button class="filter" data-filter="shoppingDistricts">🛍️ Shopping Districts</button> 
-    <button class="filter" data-filter="natureTrails">🌲 Nature Trails</button> 
-    <button class="filter" data-filter="nightlife">🍸 Nightlife</button> 
-    <button class="filter" data-filter="localCuisine">🦞 Local Cuisine</button> 
-    <button class="filter" data-filter="publicTransport">🚌 Public Transport</button> 
-    <button class="filter" data-filter="petFriendlyAreas">🐾 Pet-Friendly Areas</button> 
-    <button class="filter" data-filter="accommodations">🏠 Accommodations</button> 
-    <button class="filter" data-filter="restaurants">🍴 Restaurants</button>
+    <button class="filter">🌉 Upper Cape</button>
+    <button class="filter">🛣️ Mid-Cape</button>
+    <button class="filter">🍇 Lower Cape</button>
+    <button class="filter">🌊 Outer Cape</button>
+    <button class="filter">🏞️ Cape Cod National Seashore</button>
+    <button class="filter">🏝️ The Islands</button>
+    <hr class="filter-divider">
+    <button class="filter">👨‍👩‍👧‍👦 Family-Friendly</button>
+    <button class="filter">🏰 Historical Sites</button>
+    <button class="filter">🎨 Art Galleries</button>
+    <button class="filter">🏖️ Beach Access</button>
+    <button class="filter">🛍️ Shopping Districts</button>
+    <button class="filter">🌲 Nature Trails</button>
+    <button class="filter">🍸 Nightlife</button>
+    <button class="filter">🦞 Local Cuisine</button>
+    <button class="filter">🚌 Public Transport</button>
+    <button class="filter">🐾 Pet-Friendly Areas</button>
+    <button class="filter">🏠 Accommodations</button>
+    <button class="filter">🍴 Restaurants</button>
     `;
 
     // Add click event listener to filter buttons

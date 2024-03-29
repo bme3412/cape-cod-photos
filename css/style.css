@@ -29,7 +29,6 @@ header {
   border-radius: 4px 0 0 4px;
 }
 
-
 .search-bar button {
   padding: 8px 16px;
   font-size: 16px;
@@ -45,9 +44,9 @@ header {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 #category-buttons {
@@ -59,7 +58,8 @@ header {
 .category-btn {
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: #fff;
+  background-color: #007bff;
+  color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -69,8 +69,7 @@ header {
 
 .category-btn:hover,
 .category-btn.active {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #0056b3;
 }
 
 .category-btn i {
@@ -80,7 +79,6 @@ header {
 .content {
   display: flex;
 }
-
 
 #filters {
   flex: 0 0 250px;
@@ -127,181 +125,148 @@ header {
 #results {
   flex: 1;
 }
+.town-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.town-box {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
 
 .town-container {
   margin-bottom: 40px;
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: #fff;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Town Info Styles */
 .town-info {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .town-info h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 36px;
+  margin-bottom: 20px;
   color: #007bff;
 }
 
 .town-description {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Getting There Section */
-.getting-there {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-}
-
-.getting-there h3 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* This container will hold the two sections side by side */
-.transportation-container {
-  display: flex;
-  justify-content: space-between; /* Adjust spacing as necessary */
-}
-
-.from-boston, .from-sagamore-bridge {
-  flex: 1; /* Each takes up half the container */
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  margin: 0 10px; /* Adds some space between the two boxes */
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.from-boston:hover, .from-sagamore-bridge:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.from-boston h4, .from-sagamore-bridge h4 {
-  font-size: 20px;
-  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 18px;
   color: #555;
 }
 
-
-/* Additional Styles */
-.driving-time,
-.public-transport {
-  margin-bottom: 15px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.driving-time p,
-.public-transport p {
-  margin-bottom: 5px;
-}
-
-.crowdedness {
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 18px;
-  color: #ff5722;
-}
-
-.tips {
-  background-color: #f5f5f5;
+.grid-item {
+  background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 4px;
-  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tips:hover h4 {
-  color: #555; /* Example hover effect for tips section */
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-
-.tips h4 {
-  font-size: 18px;
+.grid-item h3 {
+  font-size: 24px;
   margin-bottom: 15px;
-  color: #777;
+  color: #007bff;
 }
 
-.tips ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
+.grid-item table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.tips li {
-  margin-bottom: 10px;
+.grid-item td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Hover Effects for Buttons */
-.category-btn:hover {
-  background-color: #0056b3;
-  color: white;
-}
-
-.category-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.category-btn.active {
-  background-color: #004085;
+.grid-item tr:last-child td {
+  border-bottom: none;
 }
 
 .town-villages {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
 }
 
 .town-villages h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-align: center;
+}
+
+.village-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.village-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.village-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.village-box h4 {
   font-size: 20px;
   margin-bottom: 15px;
   color: #333;
 }
 
-.town-villages ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-.town-villages li {
-  margin-bottom: 20px;
-}
-
-.town-villages h4 {
+.village-box h5 {
   font-size: 18px;
   margin-bottom: 10px;
   color: #555;
 }
 
-.town-villages h5 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #777;
+.village-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
 }
 
-.town-villages ul ul {
-  margin-left: 20px;
+.village-box li {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.village-box li:before {
+  content: "\2022";
+  color: #007bff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
 footer {

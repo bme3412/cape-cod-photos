@@ -1,0 +1,525 @@
+{
+    "towns": [
+      {
+        "name": "Barnstable",
+        "region": "Mid-Cape",
+        "features": [
+          "Family-Friendly",
+          "Historical Sites",
+          "Art Galleries",
+          "Beach Access",
+          "Shopping Districts",
+          "Nature Trails",
+          "Local Cuisine",
+          "Public Transport",
+          "Pet-Friendly Areas",
+          "Accommodations",
+          "Restaurants"
+        ],
+        "description": "Barnstable is the largest town on Cape Cod, comprising seven villages: Barnstable Village, Centerville, Cotuit, Hyannis, Marstons Mills, Osterville, and West Barnstable. Each village has its own unique character and attractions.",
+        "gettingThere": {
+          "fromBoston": {
+            "distance": "70 miles",
+            "drivingTime": {
+              "offSeason": "1 hour 30 minutes",
+              "summerWeekday": "2 hours",
+              "summerWeekend": "2 hours 30 minutes to 3 hours"
+            },
+            "publicTransport": {
+              "bus": "Plymouth & Brockton Bus Lines",
+              "ferry": "Hyannis Ferry (from Boston to Hyannis)"
+            }
+          },
+          "fromSagamoreBridge": {
+            "distance": "15 miles",
+            "drivingTime": {
+              "offSeason": "20 minutes",
+              "summerWeekday": "30 minutes",
+              "summerWeekend": "45 minutes to 1 hour"
+            }
+          },
+          "crowdedness": "Moderate to High",
+          "tips": [
+            "Plan your travel during off-peak hours to avoid traffic congestion.",
+            "Consider taking the ferry from Boston to Hyannis for a scenic and relaxing journey.",
+            "Make reservations for accommodations and popular restaurants in advance, especially during peak summer months."
+          ]
+        },
+        "villages": [
+          {
+            "name": "Hyannis",
+            "description": "Hyannis is the commercial and transportation hub of Barnstable and Cape Cod. It features a bustling Main Street with shops, restaurants, and the John F. Kennedy Hyannis Museum. Hyannis Harbor offers ferry services to Nantucket and Martha's Vineyard.",
+            "attractions": [
+              "<a href='https://www.hyannismainstreet.com/' target='_blank'>Main Street Hyannis</a>",
+              "<a href='https://jfkhyannismuseum.org/' target='_blank'>John F. Kennedy Hyannis Museum</a>",
+              "<a href='https://www.townofbarnstable.us/HyannisHarborMarina/' target='_blank'>Hyannis Harbor</a>",
+              "<a href='https://www.capecodchamber.org/listing/kalmus-beach/948/' target='_blank'>Kalmus Beach</a>",
+              "<a href='https://www.melodytent.org/' target='_blank'>Cape Cod Melody Tent</a>"
+            ],
+            "events": [
+              {
+                "name": "Hyannis Main Street Christmas Stroll",
+                "description": "The Hyannis Main Street Christmas Stroll is a festive event with holiday decorations, music, and shopping in downtown Hyannis.",
+                "date": "December"
+              },
+              {
+                "name": "Hyannis Arts Festival",
+                "description": "The Hyannis Arts Festival is an annual event showcasing local artists, crafters, and musicians.",
+                "date": "August"
+              }
+            ],
+            "famousResidents": ["John F. Kennedy", "Joseph P. Kennedy"],
+            "accommodations": [
+              "<a href='https://www.hyannisharborhotel.com/' target='_blank'>Hyannis Harbor Hotel</a>",
+              "<a href='https://hyannistravelinn.com/' target='_blank'>Hyannis Travel Inn</a>",
+              "<a href='https://www.anchorin.com/' target='_blank'>Anchor In Hotel</a>"
+            ],
+            "restaurants": [
+              "<a href='https://www.albertosristorante.com/' target='_blank'>Alberto's Ristorante</a>",
+              "<a href='https://thebraziliangrill.com/' target='_blank'>The Brazilian Grill</a>",
+              "<a href='https://www.baxterscapecod.com/' target='_blank'>Baxter's Boathouse</a>"
+            ]
+          },
+          {
+            "name": "Barnstable Village",
+            "description": "Barnstable Village is the historic center of Barnstable, with well-preserved architecture and landmarks. It is home to the Barnstable County Courthouse, the Sturgis Library, and the Barnstable Comedy Club.",
+            "attractions": [
+              "<a href='https://www.barnstablecounty.org/about/court-facilities/barnstable-county-courthouse/' target='_blank'>Barnstable County Courthouse</a>",
+              "<a href='https://www.sturgislibrary.org/' target='_blank'>Sturgis Library</a>",
+              "<a href='https://www.barnstablecomedyclub.org/' target='_blank'>Barnstable Comedy Club</a>",
+              "Barnstable Village Cultural District",
+              "<a href='https://www.coastguardheritagemuseum.org/' target='_blank'>Coast Guard Heritage Museum</a>"
+            ],
+            "events": [
+              {
+                "name": "Barnstable Village July 4th Parade",
+                "description": "The Barnstable Village July 4th Parade is a patriotic celebration with floats, marching bands, and community organizations.",
+                "date": "July 4th"
+              },
+              {
+                "name": "Barnstable Village Haunted Halloween",
+                "description": "Barnstable Village Haunted Halloween is a spooky event with haunted houses, costume contests, and trick-or-treating.",
+                "date": "October"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://thebarnstableinn.com/' target='_blank'>The Barnstable Inn</a>",
+              "<a href='https://www.ashleymanor.net/' target='_blank'>Ashley Manor</a>"
+            ],
+            "restaurants": [
+              "<a href='https://www.mattakeese.com/' target='_blank'>Mattakeese Wharf Restaurant</a>",
+              "<a href='https://www.dolphinrestaurant.com/' target='_blank'>Dolphin Restaurant</a>",
+              "<a href='https://barnstablerestaurant.com/' target='_blank'>The Barnstable Restaurant and Tavern</a>"
+            ]
+          },
+          {
+            "name": "Centerville",
+            "description": "Centerville is a charming village known for its beautiful beaches, historic homes, and quaint shops. It offers a mix of outdoor recreation and cultural activities.",
+            "attractions": [
+              "<a href='https://www.townofbarnstable.us/Departments/Recreation/Parks/craigvillebeach.asp' target='_blank'>Craigville Beach</a>",
+              "<a href='https://www.centervillehistoricalmuseum.org/' target='_blank'>Centerville Historical Museum</a>",
+              "<a href='http://www.fourseasicecream.com/' target='_blank'>Four Seas Ice Cream</a>",
+              "<a href='https://www.centervillelibrary.org/' target='_blank'>Centerville Public Library</a>"
+            ],
+            "events": [
+              {
+                "name": "Centerville Old Home Week",
+                "description": "Centerville Old Home Week is a celebration of the village's history and community spirit, featuring parades, barbecues, and family-friendly activities.",
+                "date": "August"
+              },
+              {
+                "name": "Centerville Christmas Stroll",
+                "description": "The Centerville Christmas Stroll is a festive event with holiday decorations, carolers, and Santa Claus visits.",
+                "date": "December"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://www.centervillecornersinn.com/' target='_blank'>Centerville Corners Inn</a>",
+              "<a href='https://longdellinn.com/' target='_blank'>Long Dell Inn</a>"
+            ],
+            "restaurants": [
+              "<a href='https://www.thedailypapercapecod.com/' target='_blank'>The Daily Paper</a>",
+              "<a href='https://centervillepies.com/' target='_blank'>Centerville Pie Company</a>",
+              "<a href='https://www.samdiegos.com/' target='_blank'>Sam Diego's Mexican Cookery & Bar</a>"
+            ]
+          },
+          {
+            "name": "Cotuit",
+            "description": "Cotuit is a picturesque village situated on the shores of Cotuit Bay. It is known for its historic charm, beautiful beaches, and thriving arts scene.",
+            "attractions": [
+              "<a href='https://artsonthecape.org/' target='_blank'>Cotuit Center for the Arts</a>",
+              "Lowell Park",
+              "<a href='https://cotuitlibrary.org/' target='_blank'>Cotuit Library</a>",
+              "Cotuit Kettleers Baseball",
+              "<a href='https://www.townofbarnstable.us/Departments/Recreation/Parks/ropesbeach.asp' target='_blank'>Ropes Beach</a>"
+            ],
+            "events": [
+              {
+                "name": "Cotuit Arts & Crafts Festival",
+                "description": "The Cotuit Arts & Crafts Festival showcases the works of local artists and artisans, with live music and food vendors.",
+                "date": "August"
+              },
+              {
+                "name": "Cotuit Kettleers Baseball Season",
+                "description": "The Cotuit Kettleers are a collegiate summer baseball team that plays at Lowell Park from June to August.",
+                "date": "June-August"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://www.thecotuitinn.com/' target='_blank'>The Cotuit Inn</a>",
+              "<a href='https://www.captainshouseinn.com/' target='_blank'>The Captain's House Inn</a>"
+            ],
+            "restaurants": [
+              "<a href='https://kettleho.com/' target='_blank'>The Kettle Ho</a>",
+              "<a href='https://www.villagercapecod.com/' target='_blank'>The Villager Cafe</a>",
+              "<a href='https://www.freshcotuit.com/' target='_blank'>Cotuit Oyster Company</a>"
+            ]
+          },
+          {
+            "name": "Marstons Mills",
+            "description": "Marstons Mills is a quiet, residential village with a strong sense of community. It features scenic lakes, historic sites, and nature trails.",
+            "attractions": [
+              "<a href='https://www.townofbarnstable.us/Departments/Recreation/Parks/burgesspark.asp' target='_blank'>Burgess Park</a>",
+              "<a href='https://www.mmpl.org/' target='_blank'>Marstons Mills Public Library</a>",
+              "Mystic Lake",
+              "Marstons Mills Community Church",
+              "<a href='https://www.townofbarnstable.us/Departments/Recreation/Parks/danforthrecreationarea.asp' target='_blank'>Danforth Recreation Area</a>"
+            ],
+            "events": [
+              {
+                "name": "Marstons Mills River Day",
+                "description": "Marstons Mills River Day is a celebration of the village's natural beauty, with kayaking, fishing, and nature walks along the Marstons Mills River.",
+                "date": "June"
+              },
+              {
+                "name": "Marstons Mills Village Day",
+                "description": "Marstons Mills Village Day is a community event with live music, food vendors, and family-friendly activities.",
+                "date": "September"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://www.lambandlion.com/' target='_blank'>The Lamb and Lion Inn</a>"
+            ],
+            "restaurants": [
+              "<a href='https://www.themillsrestaurant.com/' target='_blank'>The Mills Restaurant</a>",
+              "Paradise Pizza",
+              "<a href='https://wimpysseafoodcafe.com/' target='_blank'>Wimpy's Seafood Cafe</a>"
+            ]
+          },
+          {
+            "name": "Osterville",
+            "description": "Osterville is an affluent village known for its upscale shops, fine dining, and beautiful beaches. It offers a mix of luxury and New England charm.",
+            "attractions": [
+              "<a href='https://ostervillevillage.library.cape.lib.ma.us/' target='_blank'>Osterville Village Library</a>",
+              "<a href='https://www.townofbarnstable.us/departments/parkingdivision/Projects/armstrongkelleypark.asp' target='_blank'>Armstrong-Kelley Park</a>",
+              "<a href='https://www.townofbarnstable.us/departments/recreation/parks/dowsesbeach.asp' target='_blank'>Dowses Beach</a>",
+              "<a href='https://www.ostervillemuseum.org/' target='_blank'>Osterville Historical Museum</a>",
+              "<a href='https://www.wianno.com/' target='_blank'>Wianno Club</a>"
+            ],
+            "events": [
+              {
+                "name": "Osterville Village Day",
+                "description": "Osterville Village Day is a celebration of the village's history and community, with a parade, craft fair, and live entertainment.",
+                "date": "July"
+              },
+              {
+                "name": "Osterville Garden Club Home & Garden Tour",
+                "description": "The Osterville Garden Club Home & Garden Tour showcases the beautiful homes and gardens of Osterville, with proceeds benefiting local charities.",
+                "date": "July"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://www.wiannogreenbandb.com/' target='_blank'>Wianno Green Bed & Breakfast</a>",
+              "<a href='https://www.theostervilleinn.com/' target='_blank'>The Osterville Inn</a>"
+            ],
+            "restaurants": [
+              "<a href='https://crispflatbread.com/' target='_blank'>Crisp Flatbread</a>",
+              "<a href='https://fivebaysbistro.com/' target='_blank'>Five Bays Bistro</a>",
+              "<a href='https://www.ostervillefish.com/' target='_blank'>Osterville Fish Too</a>"
+            ]
+          },
+          {
+            "name": "West Barnstable",
+            "description": "West Barnstable is a historic village with a rural character. It is home to several historic sites, farms, and nature reserves.",
+            "attractions": [
+              "<a href='https://www.capecod.com/attractions/west-barnstable-train-station/' target='_blank'>West Barnstable Train Station</a>",
+              "<a href='https://www.townofbarnstable.us/departments/recreation/parks/sandyneckbeach.asp' target='_blank'>Sandy Neck Beach</a>",
+              "<a href='https://www.barnstablelandtrust.org/conserved-lands/west-barnstable-conservation-area/' target='_blank'>West Barnstable Conservation Area</a>",
+              "Meetinghouse Farm",
+              "<a href='https://www.1717meetinghouse.org/' target='_blank'>1717 Meetinghouse</a>"
+            ],
+            "events": [
+              {
+                "name": "West Barnstable Village Festival",
+                "description": "The West Barnstable Village Festival is a celebration of the village's agricultural heritage, with farm tours, live music, and local food.",
+                "date": "September"
+              },
+              {
+                "name": "West Barnstable Tree Lighting",
+                "description": "The West Barnstable Tree Lighting is a festive event with caroling, hot cocoa, and the lighting of the village Christmas tree.",
+                "date": "December"
+              }
+            ],
+            "accommodations": ["High Pointe Inn", "The Bursley Manor"],
+            "restaurants": [
+              "The Barnstable Tavern",
+              "Mattakeese Wharf Waterfront Restaurant",
+              "Barnstable Market"
+            ]
+          }
+        ]
+      },
+  
+      {
+        "name": "Falmouth",
+        "region": "Upper Cape",
+        "features": [
+          "Family-Friendly",
+          "Historical Sites",
+          "Art Galleries",
+          "Beach Access",
+          "Bike Trails",
+          "Local Seafood",
+          "Public Transport Options",
+          "Pet-Friendly Beaches",
+          "Luxury Accommodations",
+          "Vibrant Nightlife"
+        ],
+        "description": "Falmouth is a picturesque coastal town known for its scenic beaches, vibrant arts scene, and historical charm. It's a gateway to Martha's Vineyard and offers a variety of activities for visitors.",
+        "gettingThere": {
+          "fromBoston": {
+            "distance": "73 miles",
+            "drivingTime": {
+              "offSeason": "1 hour 15 minutes",
+              "summerWeekday": "2 hours 15 minutes",
+              "summerWeekend": "2 hours 45 minutes"
+            },
+            "publicTransport": {
+              "bus": "<a href='https://capecodtransit.org/' target='_blank'>Cape Cod Regional Transit Authority</a>",
+              "ferry": "<a href='https://islandqueen.com/' target='_blank'>Island Queen Ferry (from Falmouth to Martha's Vineyard)</a>"
+            }
+          },
+          "fromSagamoreBridge": {
+            "distance": "22 miles",
+            "drivingTime": {
+              "offSeason": "25 minutes",
+              "summerWeekday": "35 minutes",
+              "summerWeekend": "1 hour"
+            }
+          },
+          "crowdedness": "High during summer, Moderate rest of the year",
+          "tips": [
+            "Visit Falmouth's Farmers Market for local produce and crafts.",
+            "Explore the Shining Sea Bikeway for beautiful coastal views.",
+            "Don't miss the sunset at Nobska Light for a memorable experience."
+          ]
+        },
+        "villages": [
+          {
+            "name": "Woods Hole",
+            "description": "Woods Hole is a vibrant village in Falmouth known for its marine research institutions, the Woods Hole Oceanographic Institution, and the ferry terminal to Martha's Vineyard.",
+            "attractions": [
+              "<a href='https://www.fisheries.noaa.gov/new-england-mid-atlantic/outreach-and-education/woods-hole-science-aquarium' target='_blank'>Woods Hole Science Aquarium</a>",
+              "<a href='https://friendsofnobska.org/' target='_blank'>Nobska Light</a>",
+              "<a href='https://www.whoi.edu/' target='_blank'>Woods Hole Oceanographic Institution</a>",
+              "<a href='https://www.mbl.edu/' target='_blank'>Marine Biological Laboratory</a>",
+              "Woods Hole Drawbridge"
+            ],
+            "events": [
+              {
+                "name": "Woods Hole Film Festival",
+                "description": "An annual celebration of independent film, showcasing a unique selection of movies, documentaries, and shorts.",
+                "date": "July-August"
+              },
+              {
+                "name": "Woods Hole Jazz",
+                "description": "A series of jazz performances featuring local and regional musicians, held throughout the year.",
+                "date": "Various dates"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://woodsholeinn.com/' target='_blank'>Woods Hole Inn</a>",
+              "<a href='https://www.sandsoftime.com/' target='_blank'>Sands Of Time Motor Inn & Harbor House</a>"
+            ],
+            "restaurants": [
+              "<a href='https://www.woodshole.com/quicks/' target='_blank'>Quicks Hole Tavern</a>",
+              "<a href='https://www.woodshole.com/landfall/' target='_blank'>The Landfall Restaurant</a>",
+              "<a href='https://piecapecod.com/' target='_blank'>Pie In The Sky Bakery & Internet Cafe</a>"
+            ]
+          },
+          {
+            "name": "Main Street Falmouth",
+            "description": "The heart of Falmouth, known for its quaint shops, historic homes, and beautiful village green. It's a perfect place to explore on foot.",
+            "attractions": [
+              "<a href='https://museumsonthegreen.org/' target='_blank'>Falmouth Museums on the Green</a>",
+              "<a href='https://highfieldhallandgardens.org/' target='_blank'>Highfield Hall & Gardens</a>",
+              "Falmouth Village Green",
+              "<a href='https://collegelightoperacompany.com/' target='_blank'>The College Light Opera Company</a>",
+              "<a href='https://falmouthart.org/' target='_blank'>Falmouth Art Center</a>"
+            ],
+            "events": [
+              {
+                "name": "Falmouth Village Christmas Stroll",
+                "description": "A festive event with holiday lights, decorations, and activities for the whole family.",
+                "date": "December"
+              },
+              {
+                "name": "Falmouth Street Festival",
+                "description": "A summer celebration with live music, food vendors, and activities for kids.",
+                "date": "July"
+              }
+            ],
+            "accommodations": [
+              "<a href='https://www.palmerhouseinn.com/' target='_blank'>The Palmer House Inn</a>",
+              "<a href='https://innonthesquare.com/' target='_blank'>Inn on the Square</a>",
+              "<a href='https://www.captainsmanorinn.com/' target='_blank'>Captain's Manor Inn</a>"
+            ],
+            "restaurants": [
+              "<a href='https://anejo.cc/' target='_blank'>Añejo Mexican Bistro</a>",
+              "<a href='https://maisonvillatte.com/' target='_blank'>Maison Villatte</a>",
+              "<a href='https://www.glassoniondining.com/' target='_blank'>Glass Onion</a>"
+            ]
+          }
+        ]
+      },
+  
+     {
+    "name": "Nantucket",
+    "region": "The Islands",
+    "features": [
+      "Whaling History",
+      "Scenic Beaches",
+      "Cobblestone Streets",
+      "Lighthouse Tours",
+      "Boutique Shopping",
+      "Gourmet Dining",
+      "Cultural Festivals",
+      "Protected Nature Reserves",
+      "Biking Trails",
+      "Luxury Accommodations"
+    ],
+    "description": "Nantucket is a charming island located 30 miles off the coast of Cape Cod. Known for its rich whaling history, pristine beaches, and preserved historic buildings, Nantucket offers a serene getaway with a variety of cultural and recreational activities.",
+    "gettingThere": {
+      "fromBoston": {
+        "distance": "109 miles",
+        "drivingTime": {
+          "toHyannis": "1 hour 30 minutes",
+          "ferry": "Ferry from Hyannis: 2 hours (traditional), 1 hour (high-speed)"
+        },
+        "publicTransport": {
+          "bus": "To Hyannis via <a href='https://www.p-b.com/' target='_blank'>Plymouth & Brockton Street Railway Co.</a>",
+          "ferry": "<a href='https://www.steamshipauthority.com/' target='_blank'>Steamship Authority</a>, <a href='https://hylinecruises.com/' target='_blank'>Hy-Line Cruises</a>"
+        },
+        "airports": [
+          "<a href='https://www.massport.com/logan-airport/' target='_blank'>Boston Logan International Airport (BOS)</a>",
+          "<a href='https://www.nantucketairport.com/' target='_blank'>Nantucket Memorial Airport (ACK)</a> (seasonal flights from Boston, New York, and other major cities)"
+        ]
+      },
+      "fromSagamoreBridge": {
+        "distance": "65 miles",
+        "drivingTime": {
+          "toHyannis": "1 hour",
+          "ferry": "Ferry from Hyannis: 2 hours (traditional), 1 hour (high-speed)"
+        }
+      },
+      "crowdedness": "High during summer, Low to Moderate rest of the year",
+      "tips": [
+        "Booking ferry tickets in advance is highly recommended, especially in summer.",
+        "Explore the island by bike for a unique experience of its scenic beauty.",
+        "Don't miss the <a href='https://www.nha.org/visit/museums-and-tours/whaling-museum/' target='_blank'>Nantucket Whaling Museum</a> for a deep dive into the island's whaling heritage."
+      ]
+    },
+    "villages": [
+      {
+        "name": "Siasconset",
+        "description": "Often referred to as 'Sconset, this picturesque village on the eastern end of Nantucket is known for its rose-covered cottages, beautiful beaches, and the Sankaty Head Lighthouse.",
+        "attractions": [
+          "<a href='https://www.nha.org/visit/historic-sites/sankaty-head-light/' target='_blank'>Sankaty Head Lighthouse</a>",
+          "Sconset Beach",
+          "'Sconset Bluff Walk",
+          "Sconset Cafe",
+          "Sconset Market"
+        ],
+        "events": [
+          {
+            "name": "Sconset Village Stroll",
+            "description": "An annual event where residents and visitors enjoy the charming streets of 'Sconset, with food, music, and community activities.",
+            "date": "August"
+          }
+        ],
+        "accommodations": [
+          "<a href='https://thesummerhouse.com/' target='_blank'>The Summer House</a>",
+          "Sconset Cottage Rentals"
+        ],
+        "restaurants": [
+          "<a href='https://www.chanticleernantucket.com/' target='_blank'>The Chanticleer</a>",
+          "Claudette's Sandwich Shop",
+          "<a href='https://www.sconsetcafenantucket.com/' target='_blank'>Sconset Cafe</a>"
+        ]
+      },
+      {
+        "name": "Madaket",
+        "description": "Located on the western end of Nantucket, Madaket is famous for its stunning sunsets, wide sandy beaches, and the Madaket Millie's historic site.",
+        "attractions": [
+          "Madaket Beach",
+          "Smith's Point",
+          "<a href='https://www.nha.org/visit/historic-sites/madaket-millie-historic-site/' target='_blank'>Madaket Millie's Historic Site</a>",
+          "Madaket Marine"
+        ],
+        "events": [
+          {
+            "name": "Madaket Sunset Gatherings",
+            "description": "A casual gathering of locals and visitors alike to watch the spectacular sunsets. It's a must-see experience during your stay.",
+            "date": "Summer Evenings"
+          }
+        ],
+        "accommodations": [
+          "Madaket Beachfront Homes"
+        ],
+        "restaurants": [
+          "<a href='https://milliesnantucket.com/' target='_blank'>Millie's Restaurant</a>"
+        ]
+      },
+      {
+        "name": "Nantucket Town",
+        "description": "The heart of the island, Nantucket Town, is a historic district featuring cobblestone streets, unique shops, fine dining, and several museums showcasing the island's rich history.",
+        "attractions": [
+          "<a href='https://www.nha.org/visit/museums-and-tours/whaling-museum/' target='_blank'>Nantucket Whaling Museum</a>",
+          "<a href='https://www.nha.org/visit/museums-and-tours/hadwen-barney-oil-candle-factory/' target='_blank'>Hadwen & Barney Oil and Candle Factory</a>",
+          "<a href='https://www.nha.org/visit/museums-and-tours/old-mill/' target='_blank'>Old Mill</a>",
+          "<a href='https://www.nha.org/visit/museums-and-tours/greater-light/' target='_blank'>Greater Light</a>",
+          "Brant Point Lighthouse"
+        ],
+        "events": [
+          {
+            "name": "Nantucket Daffodil Festival",
+            "description": "A celebration of spring featuring an antique car parade, picnics, and thousands of daffodils in bloom across the island.",
+            "date": "April"
+          },
+          {
+            "name": "Nantucket Wine & Food Festival",
+            "description": "A premier culinary event showcasing world-class wines and top-notch chefs.",
+            "date": "May"
+          },
+          {
+            "name": "Nantucket Book Festival",
+            "description": "A gathering of acclaimed authors and passionate readers for a weekend of literary events.",
+            "date": "June"
+          }
+        ],
+        "accommodations": [
+          "<a href='https://www.whiteelephantnantucket.com/' target='_blank'>White Elephant</a>",
+          "<a href='https://www.thenantuckethotel.com/' target='_blank'>The Nantucket Hotel & Resort</a>",
+          "<a href='https://www.unioninn.com/' target='_blank'>Union Street Inn</a>"
+        ],
+        "restaurants": [
+          "<a href='https://www.restaurantlola41.com/' target='_blank'>Lola 41</a>",
+          "<a href='https://www.crunantucket.com/' target='_blank'>Cru</a>",
+          "<a href='https://www.straightwharf.com/' target='_blank'>Straight Wharf Restaurant</a>",
+          "<a href='https://www.thenautilus.com/' target='_blank'>The Nautilus</a>"
+        ]
+      }
+    ]
+  }
+  ]
+  }

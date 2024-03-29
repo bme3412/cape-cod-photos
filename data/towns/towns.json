@@ -1,463 +1,237 @@
 {
   "towns": [
     {
-      "name": "Barnstable",
-      "region": "Mid-Cape",
-      "features": [
-        "Family-Friendly",
-        "Historical Sites",
-        "Art Galleries",
-        "Beach Access",
-        "Shopping Districts",
-        "Nature Trails",
-        "Local Cuisine",
-        "Public Transport",
-        "Pet-Friendly Areas",
-        "Accommodations",
-        "Restaurants"
-      ],
-      "description": "Barnstable is the largest town on Cape Cod, comprising seven villages: Barnstable Village, Centerville, Cotuit, Hyannis, Marstons Mills, Osterville, and West Barnstable. Each village has its own unique character and attractions.",
-      "gettingThere": {
-        "fromBoston": {
-          "distance": "70 miles",
-          "drivingTime": {
-            "offSeason": "1 hour 30 minutes",
-            "summerWeekday": "2 hours",
-            "summerWeekend": "2 hours 30 minutes to 3 hours"
-          },
-          "publicTransport": {
-            "bus": "Plymouth & Brockton Bus Lines",
-            "ferry": "Hyannis Ferry (from Boston to Hyannis)"
-          }
-        },
-        "fromSagamoreBridge": {
-          "distance": "15 miles",
-          "drivingTime": {
-            "offSeason": "20 minutes",
-            "summerWeekday": "30 minutes",
-            "summerWeekend": "45 minutes to 1 hour"
-          }
-        },
-        "crowdedness": "Moderate to High",
-        "tips": [
-          "Plan your travel during off-peak hours to avoid traffic congestion.",
-          "Consider taking the ferry from Boston to Hyannis for a scenic and relaxing journey.",
-          "Make reservations for accommodations and popular restaurants in advance, especially during peak summer months."
-        ]
-      },
-      "villages": [
-        {
-          "name": "Hyannis",
-          "description": "Hyannis is the commercial and transportation hub of Barnstable and Cape Cod. It features a bustling Main Street with shops, restaurants, and the John F. Kennedy Hyannis Museum. Hyannis Harbor offers ferry services to Nantucket and Martha's Vineyard.",
-          "attractions": [
-            "Main Street Hyannis",
-            "John F. Kennedy Hyannis Museum",
-            "Hyannis Harbor",
-            "Kalmus Beach",
-            "Cape Cod Melody Tent"
-          ],
-          "events": [
-            {
-              "name": "Hyannis Main Street Christmas Stroll",
-              "description": "The Hyannis Main Street Christmas Stroll is a festive event with holiday decorations, music, and shopping in downtown Hyannis.",
-              "date": "December"
-            },
-            {
-              "name": "Hyannis Arts Festival",
-              "description": "The Hyannis Arts Festival is an annual event showcasing local artists, crafters, and musicians.",
-              "date": "August"
-            }
-          ],
-          "famousResidents": ["John F. Kennedy", "Joseph P. Kennedy"],
-          "accommodations": [
-            "Hyannis Harbor Hotel",
-            "Hyannis Travel Inn",
-            "Anchor In Hotel"
-          ],
-          "restaurants": [
-            "Alberto's Ristorante",
-            "The Brazilian Grill",
-            "Baxter's Boathouse"
-          ]
-        },
-        {
-          "name": "Barnstable Village",
-          "description": "Barnstable Village is the historic center of Barnstable, with well-preserved architecture and landmarks. It is home to the Barnstable County Courthouse, the Sturgis Library, and the Barnstable Comedy Club.",
-          "attractions": [
-            "Barnstable County Courthouse",
-            "Sturgis Library",
-            "Barnstable Comedy Club",
-            "Barnstable Village Cultural District",
-            "Coast Guard Heritage Museum"
-          ],
-          "events": [
-            {
-              "name": "Barnstable Village July 4th Parade",
-              "description": "The Barnstable Village July 4th Parade is a patriotic celebration with floats, marching bands, and community organizations.",
-              "date": "July 4th"
-            },
-            {
-              "name": "Barnstable Village Haunted Halloween",
-              "description": "Barnstable Village Haunted Halloween is a spooky event with haunted houses, costume contests, and trick-or-treating.",
-              "date": "October"
-            }
-          ],
-          "accommodations": ["The Barnstable Inn", "Ashley Manor"],
-          "restaurants": [
-            "Mattakeese Wharf Restaurant",
-            "Dolphin Restaurant",
-            "The Barnstable Restaurant and Tavern"
-          ]
-        },
-        {
-          "name": "Centerville",
-          "description": "Centerville is a charming village known for its beautiful beaches, historic homes, and quaint shops. It offers a mix of outdoor recreation and cultural activities.",
-          "attractions": [
-            "Craigville Beach",
-            "Centerville Historical Museum",
-            "Four Seas Ice Cream",
-            "Centerville Public Library"
-          ],
-          "events": [
-            {
-              "name": "Centerville Old Home Week",
-              "description": "Centerville Old Home Week is a celebration of the village's history and community spirit, featuring parades, barbecues, and family-friendly activities.",
-              "date": "August"
-            },
-            {
-              "name": "Centerville Christmas Stroll",
-              "description": "The Centerville Christmas Stroll is a festive event with holiday decorations, carolers, and Santa Claus visits.",
-              "date": "December"
-            }
-          ],
-          "accommodations": ["Centerville Corners Inn", "Long Dell Inn"],
-          "restaurants": [
-            "The Daily Paper",
-            "Centerville Pie Company",
-            "Sam Diego's Mexican Cookery & Bar"
-          ]
-        },
-        {
-          "name": "Cotuit",
-          "description": "Cotuit is a picturesque village situated on the shores of Cotuit Bay. It is known for its historic charm, beautiful beaches, and thriving arts scene.",
-          "attractions": [
-            "Cotuit Center for the Arts",
-            "Lowell Park",
-            "Cotuit Library",
-            "Cotuit Kettleers Baseball",
-            "Ropes Beach"
-          ],
-          "events": [
-            {
-              "name": "Cotuit Arts & Crafts Festival",
-              "description": "The Cotuit Arts & Crafts Festival showcases the works of local artists and artisans, with live music and food vendors.",
-              "date": "August"
-            },
-            {
-              "name": "Cotuit Kettleers Baseball Season",
-              "description": "The Cotuit Kettleers are a collegiate summer baseball team that plays at Lowell Park from June to August.",
-              "date": "June-August"
-            }
-          ],
-          "accommodations": ["The Cotuit Inn", "The Captain's House Inn"],
-          "restaurants": [
-            "The Kettle Ho",
-            "The Villager Cafe",
-            "Cotuit Oyster Company"
-          ]
-        },
-        {
-          "name": "Marstons Mills",
-          "description": "Marstons Mills is a quiet, residential village with a strong sense of community. It features scenic lakes, historic sites, and nature trails.",
-          "attractions": [
-            "Burgess Park",
-            "Marstons Mills Public Library",
-            "Mystic Lake",
-            "Marstons Mills Community Church",
-            "Danforth Recreation Area"
-          ],
-          "events": [
-            {
-              "name": "Marstons Mills River Day",
-              "description": "Marstons Mills River Day is a celebration of the village's natural beauty, with kayaking, fishing, and nature walks along the Marstons Mills River.",
-              "date": "June"
-            },
-            {
-              "name": "Marstons Mills Village Day",
-              "description": "Marstons Mills Village Day is a community event with live music, food vendors, and family-friendly activities.",
-              "date": "September"
-            }
-          ],
-          "accommodations": ["The Lamb and Lion Inn"],
-          "restaurants": [
-            "The Mills Restaurant",
-            "Paradise Pizza",
-            "Wimpy's Seafood Cafe"
-          ]
-        },
-        {
-          "name": "Osterville",
-          "description": "Osterville is an affluent village known for its upscale shops, fine dining, and beautiful beaches. It offers a mix of luxury and New England charm.",
-          "attractions": [
-            "Osterville Village Library",
-            "Armstrong-Kelley Park",
-            "Dowses Beach",
-            "Osterville Historical Museum",
-            "Wianno Club"
-          ],
-          "events": [
-            {
-              "name": "Osterville Village Day",
-              "description": "Osterville Village Day is a celebration of the village's history and community, with a parade, craft fair, and live entertainment.",
-              "date": "July"
-            },
-            {
-              "name": "Osterville Garden Club Home & Garden Tour",
-              "description": "The Osterville Garden Club Home & Garden Tour showcases the beautiful homes and gardens of Osterville, with proceeds benefiting local charities.",
-              "date": "July"
-            }
-          ],
-          "accommodations": [
-            "Wianno Green Bed & Breakfast",
-            "The Osterville Inn"
-          ],
-          "restaurants": [
-            "Crisp Flatbread",
-            "Five Bays Bistro",
-            "Osterville Fish Too"
-          ]
-        },
-        {
-          "name": "West Barnstable",
-          "description": "West Barnstable is a historic village with a rural character. It is home to several historic sites, farms, and nature reserves.",
-          "attractions": [
-            "West Barnstable Train Station",
-            "Sandy Neck Beach",
-            "West Barnstable Conservation Area",
-            "Meetinghouse Farm",
-            "1717 Meetinghouse"
-          ],
-          "events": [
-            {
-              "name": "West Barnstable Village Festival",
-              "description": "The West Barnstable Village Festival is a celebration of the village's agricultural heritage, with farm tours, live music, and local food.",
-              "date": "September"
-            },
-            {
-              "name": "West Barnstable Tree Lighting",
-              "description": "The West Barnstable Tree Lighting is a festive event with caroling, hot cocoa, and the lighting of the village Christmas tree.",
-              "date": "December"
-            }
-          ],
-          "accommodations": ["High Pointe Inn", "The Bursley Manor"],
-          "restaurants": [
-            "The Barnstable Tavern",
-            "Mattakeese Wharf Waterfront Restaurant",
-            "Barnstable Market"
-          ]
-        }
-      ]
-    },
-    {
       "name": "Falmouth",
-      "region": "Upper Cape",
-      "features": [
-        "Family-Friendly",
-        "Historical Sites",
-        "Art Galleries",
-        "Beach Access",
-        "Bike Trails",
-        "Local Seafood",
-        "Public Transport Options",
-        "Pet-Friendly Beaches",
-        "Luxury Accommodations",
-        "Vibrant Nightlife"
-      ],
-      "description": "Falmouth is a picturesque coastal town known for its scenic beaches, vibrant arts scene, and historical charm. It's a gateway to Martha's Vineyard and offers a variety of activities for visitors.",
-      "gettingThere": {
-        "fromBoston": {
-          "distance": "73 miles",
-          "drivingTime": {
-            "offSeason": "1 hour 15 minutes",
-            "summerWeekday": "2 hours 15 minutes",
-            "summerWeekend": "2 hours 45 minutes"
-          },
-          "publicTransport": {
-            "bus": "Cape Cod Regional Transit Authority",
-            "ferry": "Island Queen Ferry (from Falmouth to Martha's Vineyard)"
-          }
-        },
-        "fromSagamoreBridge": {
-          "distance": "22 miles",
-          "drivingTime": {
-            "offSeason": "25 minutes",
-            "summerWeekday": "35 minutes",
-            "summerWeekend": "1 hour"
-          }
-        },
-        "crowdedness": "High during summer, Moderate rest of the year",
-        "tips": [
-          "Visit Falmouth's Farmers Market for local produce and crafts.",
-          "Explore the Shining Sea Bikeway for beautiful coastal views.",
-          "Don't miss the sunset at Nobska Light for a memorable experience."
-        ]
-      },
-      "villages": [
-        {
-          "name": "Woods Hole",
-          "description": "Woods Hole is a vibrant village in Falmouth known for its marine research institutions, the Woods Hole Oceanographic Institution, and the ferry terminal to Martha's Vineyard.",
-          "attractions": [
-            "Woods Hole Science Aquarium",
-            "Nobska Light",
-            "Woods Hole Oceanographic Institution",
-            "Marine Biological Laboratory",
-            "Woods Hole Drawbridge"
-          ],
-          "events": [
-            {
-              "name": "Woods Hole Film Festival",
-              "description": "An annual celebration of independent film, showcasing a unique selection of movies, documentaries, and shorts.",
-              "date": "July-August"
-            },
-            {
-              "name": "Woods Hole Jazz",
-              "description": "A series of jazz performances featuring local and regional musicians, held throughout the year.",
-              "date": "Various dates"
-            }
-          ],
-          "accommodations": [
-            "Woods Hole Inn",
-            "Sands Of Time Motor Inn & Harbor House"
-          ],
-          "restaurants": [
-            "Quicks Hole Tavern",
-            "The Landfall Restaurant",
-            "Pie In The Sky Bakery & Internet Cafe"
-          ]
-        },
-        {
-          "name": "Main Street Falmouth",
-          "description": "The heart of Falmouth, known for its quaint shops, historic homes, and beautiful village green. It's a perfect place to explore on foot.",
-          "attractions": [
-            "Falmouth Museums on the Green",
-            "Highfield Hall & Gardens",
-            "Falmouth Village Green",
-            "The College Light Opera Company",
-            "Falmouth Art Center"
-          ],
-          "events": [
-            {
-              "name": "Falmouth Village Christmas Stroll",
-              "description": "A festive event with holiday lights, decorations, and activities for the whole family.",
-              "date": "December"
-            },
-            {
-              "name": "Falmouth Street Festival",
-              "description": "A summer celebration with live music, food vendors, and activities for kids.",
-              "date": "July"
-            }
-          ],
-          "accommodations": [
-            "The Palmer House Inn",
-            "Inn on the Square",
-            "Captain's Manor Inn"
-          ],
-          "restaurants": [
-            "Añejo Mexican Bistro",
-            "Maison Villatte",
-            "Glass Onion"
-          ]
-        }
-      ]
+      "description": "A charming coastal town with beautiful beaches and historic sites.",
+      "filters": {
+        "greatBeaches": true,
+        "whaleWatches": false,
+        "localArtScene": true,
+        "easyToGetTo": true,
+        "weddingVenues": true,
+        "greatGolf": false,
+        "bikePaths": true,
+        "lighthouses": true,
+        "deepSeaFishing": false,
+        "familyFriendly": true,
+        "diningOptions": true,
+        "nightlife": false,
+        "july4thEvents": true,
+        "capeBaseballLeague": true,
+        "sharkFree": true,
+        "massTransit": false,
+        "upperCape": true,
+        "midCape": false,
+        "lowerCape": false,
+        "outerCape": false,
+        "capecodNationalSeashore": false,
+        "islands": false,
+        "historicalSites": true,
+        "artGalleries": true,
+        "beachAccess": true,
+        "shoppingDistricts": false,
+        "natureTrails": true,
+        "localCuisine": true,
+        "publicTransport": false,
+        "petFriendlyAreas": true,
+        "accommodations": true,
+        "restaurants": true
+      }
     },
 
     {
-      "name": "Nantucket",
-      "region": "The Islands",
-      "features": [
-        "Whaling History",
-        "Scenic Beaches",
-        "Cobblestone Streets",
-        "Lighthouse Tours",
-        "Boutique Shopping",
-        "Gourmet Dining",
-        "Cultural Festivals",
-        "Protected Nature Reserves",
-        "Biking Trails",
-        "Luxury Accommodations"
-      ],
-      "description": "Nantucket is a charming island located 30 miles off the coast of Cape Cod. Known for its rich whaling history, pristine beaches, and preserved historic buildings, Nantucket offers a serene getaway with a variety of cultural and recreational activities.",
-      "gettingThere": {
-        "fromBoston": {
-          "distance": "109 miles",
-          "drivingTime": {
-            "toHyannis": "1 hour 30 minutes",
-            "ferry": "Ferry from Hyannis: 2 hours (traditional), 1 hour (high-speed)"
-          },
-          "publicTransport": {
-            "bus": "To Hyannis via Plymouth & Brockton Street Railway Co.",
-            "ferry": "Steamship Authority, Hy-Line Cruises"
-          }
-        },
-        "fromSagamoreBridge": {
-          "distance": "65 miles",
-          "drivingTime": {
-            "toHyannis": "1 hour",
-            "ferry": "Ferry from Hyannis: 2 hours (traditional), 1 hour (high-speed)"
-          }
-        },
-        "crowdedness": "High during summer, Low to Moderate rest of the year",
-        "tips": [
-          "Booking ferry tickets in advance is highly recommended, especially in summer.",
-          "Explore the island by bike for a unique experience of its scenic beauty.",
-          "Don't miss the Nantucket Whaling Museum for a deep dive into the island's whaling heritage."
-        ]
-      },
-      "villages": [
-        {
-          "name": "Siasconset",
-          "description": "Often referred to as 'Sconset, this picturesque village on the eastern end of Nantucket is known for its rose-covered cottages, beautiful beaches, and the Sankaty Head Lighthouse.",
-          "attractions": [
-            "Sankaty Head Lighthouse",
-            "Sconset Beach",
-            "'Sconset Bluff Walk",
-            "Sconset Cafe",
-            "Sconset Market"
-          ],
-          "events": [
-            {
-              "name": "Sconset Village Stroll",
-              "description": "An annual event where residents and visitors enjoy the charming streets of 'Sconset, with food, music, and community activities.",
-              "date": "August"
-            }
-          ],
-          "accommodations": ["The Summer House", "Sconset Cottage Rentals"],
-          "restaurants": [
-            "The Chanticleer",
-            "Claudette's Sandwich Shop",
-            "Sconset Cafe"
-          ]
-        },
-        {
-          "name": "Madaket",
-          "description": "Located on the western end of Nantucket, Madaket is famous for its stunning sunsets, wide sandy beaches, and the Madaket Millie's historic site.",
-          "attractions": [
-            "Madaket Beach",
-            "Smith's Point",
-            "Madaket Millie's Historic Site",
-            "Madaket Marine"
-          ],
-          "events": [
-            {
-              "name": "Madaket Sunset Gatherings",
-              "description": "A casual gathering of locals and visitors alike to watch the spectacular sunsets. It's a must-see experience during your stay.",
-              "date": "Summer Evenings"
-            }
-          ],
-          "accommodations": ["Madaket Beachfront Homes"],
-          "restaurants": ["Millie's Restaurant"]
+      "name": "Bourne",
+      "description": "A historic town located at the gateway to Cape Cod, known for its scenic beauty and outdoor activities.",
+      "filters": {
+        "greatBeaches": true,
+        "whaleWatches": false,
+        "localArtScene": false,
+        "easyToGetTo": true,
+        "weddingVenues": true,
+        "greatGolf": true,
+        "bikePaths": true,
+        "lighthouses": false,
+        "deepSeaFishing": true,
+        "familyFriendly": true,
+        "diningOptions": true,
+        "nightlife": false,
+        "july4thEvents": true,
+        "capeBaseballLeague": true,
+        "sharkFree": true,
+        "massTransit": false,
+        "upperCape": true,
+        "midCape": false,
+        "lowerCape": false,
+        "outerCape": false,
+        "capecodNationalSeashore": false,
+        "islands": false,
+        "historicalSites": true,
+        "artGalleries": false,
+        "beachAccess": true,
+        "shoppingDistricts": false,
+        "natureTrails": true,
+        "localCuisine": true,
+        "publicTransport": false,
+        "petFriendlyAreas": true,
+        "accommodations": true,
+        "restaurants": true
+      }
+    },
+
+    {
+      "name": "Sandwich",
+      "description": "A charming and historic town known for its quaint village center, beautiful beaches, and outdoor recreation.",
+      "filters": {
+        "greatBeaches": true,
+        "whaleWatches": false,
+        "localArtScene": true,
+        "easyToGetTo": true,
+        "weddingVenues": true,
+        "greatGolf": true,
+        "bikePaths": true,
+        "lighthouses": false,
+        "deepSeaFishing": false,
+        "familyFriendly": true,
+        "diningOptions": true,
+        "nightlife": false,
+        "july4thEvents": true,
+        "capeBaseballLeague": true,
+        "sharkFree": true,
+        "massTransit": false,
+        "upperCape": true,
+        "midCape": false,
+        "lowerCape": false,
+        "outerCape": false,
+        "capecodNationalSeashore": false,
+        "islands": false,
+        "historicalSites": true,
+        "artGalleries": true,
+        "beachAccess": true,
+        "shoppingDistricts": true,
+        "natureTrails": true,
+        "localCuisine": true,
+        "publicTransport": false,
+        "petFriendlyAreas": true,
+        "accommodations": true,
+        "restaurants": true
+      }
+    },
+
+    {
+      "name": "Chatham",
+      "description": "A quaint town known for its scenic beaches and historic charm.",
+      "filters": {
+        "greatBeaches": true,
+        "whaleWatches": true,
+        "localArtScene": true,
+        "easyToGetTo": false,
+        "weddingVenues": true,
+        "greatGolf": true,
+        "bikePaths": true,
+        "lighthouses": true,
+        "deepSeaFishing": true,
+        "familyFriendly": true,
+        "diningOptions": true,
+        "nightlife": false,
+        "july4thEvents": true,
+        "capeBaseballLeague": false,
+        "sharkFree": false,
+        "massTransit": false,
+        "upperCape": false,
+        "midCape": false,
+        "lowerCape": true,
+        "outerCape": false,
+        "capecodNationalSeashore": false,
+        "islands": false,
+        "historicalSites": true,
+        "artGalleries": true,
+        "beachAccess": true,
+        "shoppingDistricts": true,
+        "natureTrails": true,
+        "localCuisine": true,
+        "publicTransport": false,
+        "petFriendlyAreas": true,
+        "accommodations": true,
+        "restaurants": true
+      }
+    },
+
+    {
+      "name": "Barnstable",
+      "description": "The largest town on Cape Cod, known for its historic villages and scenic harbors.",
+      "filters": {
+        "greatBeaches": true,
+        "whaleWatches": false,
+        "localArtScene": true,
+        "easyToGetTo": true,
+        "weddingVenues": true,
+        "greatGolf": true,
+        "bikePaths": true,
+        "lighthouses": false,
+        "deepSeaFishing": true,
+        "familyFriendly": true,
+        "diningOptions": true,
+        "nightlife": true,
+        "july4thEvents": true,
+        "capeBaseballLeague": true,
+        "sharkFree": false,
+        "massTransit": true,
+        "upperCape": false,
+        "midCape": true,
+        "lowerCape": false,
+        "outerCape": false,
+        "capecodNationalSeashore": false,
+        "islands": false,
+        "historicalSites": true,
+        "artGalleries": true,
+        "beachAccess": true,
+        "shoppingDistricts": true,
+        "natureTrails": true,
+        "localCuisine": true,
+        "publicTransport": true,
+        "petFriendlyAreas": true,
+        "accommodations": true,
+        "restaurants": true
+      }
+    },
+
+    {
+        "name": "Yarmouth",
+        "description": "A vibrant town with beautiful beaches, golf courses, and a variety of attractions for all ages.",
+        "filters": {
+          "greatBeaches": true,
+          "whaleWatches": false,
+          "localArtScene": true,
+          "easyToGetTo": true,
+          "weddingVenues": true,
+          "greatGolf": true,
+          "bikePaths": true,
+          "lighthouses": false,
+          "deepSeaFishing": true,
+          "familyFriendly": true,
+          "diningOptions": true,
+          "nightlife": true,
+          "july4thEvents": true,
+          "capeBaseballLeague": true,
+          "sharkFree": true,
+          "massTransit": false,
+          "upperCape": false,
+          "midCape": true,
+          "lowerCape": false,
+          "outerCape": false,
+          "capecodNationalSeashore": false,
+          "islands": false,
+          "historicalSites": true,
+          "artGalleries": true,
+          "beachAccess": true,
+          "shoppingDistricts": true,
+          "natureTrails": true,
+          "localCuisine": true,
+          "publicTransport": false,
+          "petFriendlyAreas": true,
+          "accommodations": true,
+          "restaurants": true
         }
-      ]
-    }
+      }
   ]
 }
