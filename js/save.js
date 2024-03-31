@@ -24,9 +24,11 @@ categoryButtons.forEach((button) => {
   });
 });
 
-
 function fetchAndDisplayResults(category, filters = {}) {
-  const url = category === "towns" ? "data/towns/towns.json" : "data/beaches/beaches.json";
+  const url =
+    category === "towns"
+      ? "../data/towns/towns.json"
+      : "../data/beaches/beaches.json";
 
   fetch(url)
     .then((response) => response.json())
@@ -92,7 +94,8 @@ async function displayResults(items, category) {
 
           arrowLeft.addEventListener("click", (event) => {
             event.stopPropagation();
-            currentPhotoIndex = (currentPhotoIndex - 1 + photoUrls.length) % photoUrls.length;
+            currentPhotoIndex =
+              (currentPhotoIndex - 1 + photoUrls.length) % photoUrls.length;
             photo.src = photoUrls[currentPhotoIndex];
           });
 
@@ -121,21 +124,28 @@ async function displayResults(items, category) {
 let activeFilters = {};
 
 function applyFilters(category) {
-  const filteredResults = Object.entries(activeFilters).reduce((acc, [filterKey, isActive]) => {
-    if (isActive) {
-      acc[filterKey] = true;
-    }
-    return acc;
-  }, {});
+  const filteredResults = Object.entries(activeFilters).reduce(
+    (acc, [filterKey, isActive]) => {
+      if (isActive) {
+        acc[filterKey] = true;
+      }
+      return acc;
+    },
+    {}
+  );
 
   // Clear the previous results
   resultsContainer.innerHTML = "";
 
   if (category === "beaches") {
-    const selectedTown = Object.keys(filteredResults).find(filter => filter.startsWith("town-"));
+    const selectedTown = Object.keys(filteredResults).find((filter) =>
+      filter.startsWith("town-")
+    );
     if (selectedTown) {
       // If a town filter is selected for beaches, fetch and display beaches by town
-      fetchAndDisplayResults(category, { town: selectedTown.replace("town-", "") });
+      fetchAndDisplayResults(category, {
+        town: selectedTown.replace("town-", ""),
+      });
     } else {
       // If no town filter is selected, fetch and display results based on the selected beach filters
       fetchAndDisplayResults(category, filteredResults);
@@ -203,59 +213,66 @@ function populateFilters(category) {
       });
     });
   } else if (category === "beaches") {
-  // Add beach-specific filters
-  filterContainer.innerHTML = `
-    <button class="filter" data-filter="petFriendly">🐾 Pet-Friendly</button>
-    <button class="filter" data-filter="lifeguards">🚨 Lifeguards On Duty</button>
-    <button class="filter" data-filter="waterSports">🏄‍♂️ Water Sports</button>
-    <button class="filter" data-filter="softSand">🏖️ Soft Sand</button>
-    <button class="filter" data-filter="rockyShores">🪨 Rocky Shores</button>
-    <button class="filter" data-filter="quietSpots">🔇 Quiet Spots</button>
-    <button class="filter" data-filter="familyAreas">👨‍👩‍👧‍👦 Family Areas</button>
-    <button class="filter" data-filter="picnicFacilities">🧺 Picnic Facilities</button>
-    <button class="filter" data-filter="publicRestrooms">🚻 Public Restrooms</button>
-    <button class="filter" data-filter="boardwalks">🚶‍♀️ Boardwalks</button>
-    <button class="filter" data-filter="ampleParking">🅿️ Ample Parking</button>
-    <button class="filter" data-filter="sharkFree">🦈🚫 Shark-Free</button>
-    <button class="filter" data-filter="warmWater">🌡️ Warm Water</button>
-    <button class="filter" data-filter="boatRamp">🛶 Boat Ramp</button>
-    <hr class="filter-divider">
-    <button class="filter">🌉 Upper Cape</button>
-    <button class="filter">🛣️ Mid-Cape</button>
-    <button class="filter">🍇 Lower Cape</button>
-    <button class="filter">🌊 Outer Cape</button>
-    <button class="filter">🏞️ Cape Cod National Seashore</button>
-    <button class="filter">🏝️ The Islands</button>
-    <hr class="filter-divider">
-    <button class="filter" data-filter="town-Falmouth">🌊 Falmouth</button>
-    <button class="filter" data-filter="town-Bourne">⚓ Bourne</button>
-    <button class="filter" data-filter="town-Sandwich">🥪 Sandwich</button>
-    <button class="filter" data-filter="town-Barnstable">🐚 Barnstable</button>
-    <button class="filter" data-filter="town-Yarmouth">⛵ Yarmouth</button>
-    <button class="filter" data-filter="town-Dennis">🌅 Dennis</button>
-    <button class="filter" data-filter="town-Harwich">🐟 Harwich</button>
-    <button class="filter" data-filter="town-Brewster">🌿 Brewster</button>
-    <button class="filter" data-filter="town-Chatham">🦈 Chatham</button>
-    <button class="filter" data-filter="town-Orleans">🦞 Orleans</button>
-    <button class="filter" data-filter="town-Eastham">🌊 Eastham</button>
-    <button class="filter" data-filter="town-Wellfleet">🦪 Wellfleet</button>
-    <button class="filter" data-filter="town-Truro">🎨 Truro</button>
-    <button class="filter" data-filter="town-Provincetown">🌈 Provincetown</button>
-    <button class="filter" data-filter="town-Nantucket">⚓ Nantucket</button>
-    <button class="filter" data-filter="town-Martha's Vineyard">🍇 Martha's Vineyard</button>
-  `;
-  // Add click event listener to beach filter buttons
-  const filterButtons = document.querySelectorAll(".filter");
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
-      activeFilters[filter] = !activeFilters[filter];
-      applyFilters(category);
+    // Add beach-specific filters
+    filterContainer.innerHTML = `
+  <button class="filter" data-filter="petFriendly">🐾 Pet-Friendly</button>
+  <button class="filter" data-filter="lifeguards">🚨 Lifeguards On Duty</button>
+  <button class="filter" data-filter="waterSports">🏄‍♂️ Water Sports</button>
+  <button class="filter" data-filter="softSand">🏖️ Soft Sand</button>
+  <button class="filter" data-filter="rockyShores">🪨 Rocky Shores</button>
+  <button class="filter" data-filter="quietSpots">🔇 Quiet Spots</button>
+  <button class="filter" data-filter="familyAreas">👨‍👩‍👧‍👦 Family Areas</button>
+  <button class="filter" data-filter="picnicFacilities">🧺 Picnic Facilities</button>
+  <button class="filter" data-filter="publicRestrooms">🚻 Public Restrooms</button>
+  <button class="filter" data-filter="boardwalks">🚶‍♀️ Boardwalks</button>
+  <button class="filter" data-filter="ampleParking">🅿️ Ample Parking</button>
+  <button class="filter" data-filter="sharkFree">🦈🚫 Shark-Free</button>
+  <button class="filter" data-filter="warmWater">🌡️ Warm Water</button>
+  <button class="filter" data-filter="boatRamp">🛶 Boat Ramp</button>
+  <hr class="filter-divider">
+      <button class="filter" data-region="Upper Cape">🌉 Upper Cape</button>
+      <button class="filter" data-region="Mid-Cape">🛣️ Mid-Cape</button>
+      <button class="filter" data-region="Lower Cape">🍇 Lower Cape</button>
+      <button class="filter" data-region="Outer Cape">🌊 Outer Cape</button>
+      <button class="filter" data-region="Cape Cod National Seashore">🏞️ National Seashore</button>
+      <button class="filter" data-region="The Islands">🏝️ The Islands</button>
+      <hr class="filter-divider">
+  <button class="filter" data-filter="town-Falmouth">🌊 Falmouth</button>
+  <button class="filter" data-filter="town-Bourne">⚓ Bourne</button>
+  <button class="filter" data-filter="town-Sandwich">🥪 Sandwich</button>
+  <button class="filter" data-filter="town-Barnstable">🐚 Barnstable</button>
+  <button class="filter" data-filter="town-Yarmouth">⛵ Yarmouth</button>
+  <button class="filter" data-filter="town-Dennis">🌅 Dennis</button>
+  <button class="filter" data-filter="town-Harwich">🐟 Harwich</button>
+  <button class="filter" data-filter="town-Brewster">🌿 Brewster</button>
+  <button class="filter" data-filter="town-Chatham">🦈 Chatham</button>
+  <button class="filter" data-filter="town-Orleans">🦞 Orleans</button>
+  <button class="filter" data-filter="town-Eastham">🌊 Eastham</button>
+  <button class="filter" data-filter="town-Wellfleet">🦪 Wellfleet</button>
+  <button class="filter" data-filter="town-Truro">🎨 Truro</button>
+  <button class="filter" data-filter="town-Provincetown">🌈 Provincetown</button>
+  <button class="filter" data-filter="town-Nantucket">⚓ Nantucket</button>
+  <button class="filter" data-filter="town-Martha\'s Vineyard">🍇 Martha's Vineyard</button>
+`;
+    // Add click event listener to beach filter buttons
+    const filterButtons = document.querySelectorAll(".filter");
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+        const region = button.getAttribute("data-region");
+        
+        if (filter) {
+          activeFilters[filter] = !activeFilters[filter];
+        } else if (region) {
+          activeFilters.region = region;
+        }
+        
+        applyFilters(category);
 
-      // Toggle the 'active' class on the clicked button
-      button.classList.toggle("active");
+        // Toggle the 'active' class on the clicked button
+        button.classList.toggle("active");
+      });
     });
-  });
   } else if (category === "things-to-do") {
     // Add activities-specific filters
     filterContainer.innerHTML = `
@@ -311,20 +328,24 @@ function toggleFiltersSection(category) {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   // Event listener for filter buttons
   const filterButtons = document.querySelectorAll(".filter");
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const category = document.querySelector(".category-btn.active").getAttribute("data-category");
+      const category = document
+        .querySelector(".category-btn.active")
+        .getAttribute("data-category");
       const filter = button.getAttribute("data-filter");
       const town = button.getAttribute("data-town");
+      const region = button.getAttribute("data-region");
 
       if (filter) {
         activeFilters[filter] = !activeFilters[filter];
       } else if (town) {
         activeFilters.town = town;
+      } else if (region) {
+        activeFilters.region = region;
       }
 
       applyFilters(category);
@@ -334,64 +355,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function fetchPhotosForPlaceId(placeId, count) {
   return new Promise((resolve, reject) => {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    service.getDetails({
-      placeId: placeId,
-      fields: ['photos']
-    }, (place, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK && place.photos && place.photos.length > 0) {
-        // Sort the photos based on their rating in descending order
-        const sortedPhotos = place.photos.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    const service = new google.maps.places.PlacesService(
+      document.createElement("div")
+    );
+    service.getDetails(
+      {
+        placeId: placeId,
+        fields: ["photos"],
+      },
+      (place, status) => {
+        if (
+          status === google.maps.places.PlacesServiceStatus.OK &&
+          place.photos &&
+          place.photos.length > 0
+        ) {
+          // Sort the photos based on their rating in descending order
+          const sortedPhotos = place.photos.sort(
+            (a, b) => (b.rating || 0) - (a.rating || 0)
+          );
 
-        // Get the URLs of the top-rated photos
-        const photoUrls = sortedPhotos.slice(0, count).map(photo =>
-          photo.getUrl({ 'maxWidth': 400, 'maxHeight': 400 })
-        );
-        resolve(photoUrls);
-      } else {
-        resolve([]);
+          // Get the URLs of the top-rated photos
+          const photoUrls = sortedPhotos
+            .slice(0, count)
+            .map((photo) => photo.getUrl({ maxWidth: 400, maxHeight: 400 }));
+          resolve(photoUrls);
+        } else {
+          resolve([]);
+        }
       }
-    });
+    );
   });
 }
 
 function getPlaceIdForItem(itemName, category) {
-    return new Promise((resolve, reject) => {
-      const request = {
-        query: itemName + ", Cape Cod, MA",
-        fields: ["place_id"],
-      };
-      const service = new google.maps.places.PlacesService(document.createElement("div"));
-      service.findPlaceFromQuery(request, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK && results.length > 0) {
-          resolve(results[0].place_id);
-        } else {
-          resolve(null);
-        }
-      });
+  return new Promise((resolve, reject) => {
+    const request = {
+      query: itemName + ", Cape Cod, MA",
+      fields: ["place_id"],
+    };
+    const service = new google.maps.places.PlacesService(
+      document.createElement("div")
+    );
+    service.findPlaceFromQuery(request, (results, status) => {
+      if (
+        status === google.maps.places.PlacesServiceStatus.OK &&
+        results.length > 0
+      ) {
+        resolve(results[0].place_id);
+      } else {
+        resolve(null);
+      }
     });
-  }
+  });
+}
 function lazyLoadImages() {
-  const lazyImages = document.querySelectorAll('.lazy');
+  const lazyImages = document.querySelectorAll(".lazy");
 
   const options = {
-    rootMargin: '0px',
-    threshold: 0.1
+    rootMargin: "0px",
+    threshold: 0.1,
   };
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target;
-        const src = img.getAttribute('data-src');
-        img.setAttribute('src', src);
-        img.classList.remove('lazy');
+        const src = img.getAttribute("data-src");
+        img.setAttribute("src", src);
+        img.classList.remove("lazy");
         observer.unobserve(img);
       }
     });
   }, options);
 
-  lazyImages.forEach(image => {
+  lazyImages.forEach((image) => {
     observer.observe(image);
   });
 }
@@ -428,7 +465,8 @@ function expandPhoto(photoUrls, currentIndex) {
   let currentPhotoIndex = currentIndex;
 
   arrowLeft.addEventListener("click", () => {
-    currentPhotoIndex = (currentPhotoIndex - 1 + photoUrls.length) % photoUrls.length;
+    currentPhotoIndex =
+      (currentPhotoIndex - 1 + photoUrls.length) % photoUrls.length;
     expandedPhoto.src = photoUrls[currentPhotoIndex];
   });
 

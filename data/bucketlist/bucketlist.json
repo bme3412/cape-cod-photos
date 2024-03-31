@@ -1,0 +1,86 @@
+[
+    {
+      "category": "Outdoor Activities",
+      "items": [
+        {
+          "name": "Hiking the Cape Cod National Seashore trails",
+          "description": "Explore the beautiful hiking trails of Cape Cod National Seashore."
+        },
+        {
+          "name": "Biking the Cape Cod Rail Trail",
+          "description": "Enjoy a scenic bike ride along the Cape Cod Rail Trail."
+        },
+        {
+          "name": "Kayaking in Pleasant Bay",
+          "description": "Experience the serene waters of Pleasant Bay on a kayaking adventure."
+        },
+        {
+          "name": "Golfing at Ocean Edge Resort",
+          "description": "Play a round of golf at the stunning Ocean Edge Resort."
+        }
+      ]
+    },
+    {
+      "category": "Beaches",
+      "items": [
+        {
+          "name": "Relaxing at Coast Guard Beach",
+          "description": "Spend a relaxing day at Coast Guard Beach in Eastham."
+        },
+        {
+          "name": "Surfing at Nauset Beach",
+          "description": "Catch some waves at Nauset Beach in Orleans."
+        },
+        {
+          "name": "Sunbathing at Craigville Beach",
+          "description": "Soak up the sun at the beautiful Craigville Beach in Centerville."
+        },
+        {
+          "name": "Collecting shells at Mayflower Beach",
+          "description": "Discover a variety of shells at Mayflower Beach in Dennis."
+        }
+      ]
+    },
+    {
+      "category": "Cultural Experiences",
+      "items": [
+        {
+          "name": "Visiting the Pilgrim Monument",
+          "description": "Explore the historic Pilgrim Monument in Provincetown."
+        },
+        {
+          "name": "Attending a show at the Cape Playhouse",
+          "description": "Enjoy a live performance at the renowned Cape Playhouse in Dennis."
+        },
+        {
+          "name": "Exploring the Cape Cod Museum of Art",
+          "description": "Discover the works of local artists at the Cape Cod Museum of Art."
+        },
+        {
+          "name": "Taking a tour of the Edward Gorey House",
+          "description": "Step into the quirky world of Edward Gorey at his former residence in Yarmouth Port."
+        }
+      ]
+    },
+    {
+      "category": "Food and Drink",
+      "items": [
+        {
+          "name": "Indulging in a lobster roll at Sesuit Harbor Cafe",
+          "description": "Savor a delicious lobster roll at the iconic Sesuit Harbor Cafe in Dennis."
+        },
+        {
+          "name": "Sampling local brews at Cape Cod Beer",
+          "description": "Taste a variety of locally crafted beers at Cape Cod Beer in Hyannis."
+        },
+        {
+          "name": "Enjoying fresh oysters at Raw Bar",
+          "description": "Indulge in freshly shucked oysters at the Raw Bar in Mashpee."
+        },
+        {
+          "name": "Treating yourself to homemade ice cream at Four Seas",
+          "description": "Delight in the creamy, homemade flavors at Four Seas Ice Cream in Centerville."
+        }
+      ]
+    }
+  ]

@@ -1,32 +1,72 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
 }
 
+
 header {
   background-color: #fff;
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .logo img {
-  height: 40px;
+  width: 120%;
+  max-width: 235px;
+  height: auto;
+}
+
+.header-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-links li {
+  margin-right: 20px;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-links a:hover {
+  background-color: #007bff;
+  color: #fff;
 }
 
 .search-bar {
   display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  padding: 5px;
 }
 
 .search-bar input {
   padding: 8px;
   font-size: 16px;
   border: none;
-  border-radius: 4px 0 0 4px;
+  background-color: transparent;
+  flex-grow: 1;
+  margin-left: 10px;
 }
 
 .search-bar button {
@@ -35,7 +75,7 @@ header {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -43,7 +83,6 @@ header {
 .search-bar button:hover {
   background-color: #0056b3;
 }
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
