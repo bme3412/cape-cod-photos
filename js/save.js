@@ -25,54 +25,22 @@ categoryButtons.forEach((button) => {
 });
 
 
-function fetchAndDisplayResults(category, filters) {
-  const url = category === "towns" ? "data/towns/towns.json" : "data/beaches/beaches.json";
-
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const items = category === "towns" ? data.towns : data.beaches;
-
-      let filteredItems = items;
-
-      if (Object.keys(filters).length > 0) {
-        filteredItems = items.filter((item) => {
-          return Object.entries(filters).every(([filterKey, isActive]) => {
-            if (isActive) {
-              if (filterKey === "town") {
-                return item.name === filters.town;
-              } else {
-                return item.filters[filterKey] === true;
-              }
-            }
-            return true;
-          });
-        });
-      }
-
-      displayResults(filteredItems, category);
-    })
-    .catch((error) => console.error("Error fetching data:", error));
-}
-
 function fetchAndDisplayResults(category, filters = {}) {
   const url = category === "towns" ? "data/towns/towns.json" : "data/beaches/beaches.json";
 
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const items = category === "towns" ? data.towns : data.beaches;
+      let items = category === "towns" ? data.towns : data.beaches;
 
-      let filteredItems = items;
-
-      if (Object.keys(filters).length > 0) {
-        filteredItems = items.filter((item) => {
+      if (filters && Object.keys(filters).length > 0) {
+        items = items.filter((item) => {
           return Object.entries(filters).every(([filterKey, isActive]) => {
             if (isActive) {
               if (filterKey === "town") {
-                return item.name === filters.town;
+                return item.town === filters.town;
               } else {
-                return item.filters[filterKey] === true;
+                return item.filters[filterKey];
               }
             }
             return true;
@@ -80,10 +48,11 @@ function fetchAndDisplayResults(category, filters = {}) {
         });
       }
 
-      displayResults(filteredItems, category);
+      displayResults(items, category);
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
+
 async function displayResults(items, category) {
   resultsContainer.innerHTML = ""; // Clear current results
 
@@ -159,22 +128,23 @@ function applyFilters(category) {
     return acc;
   }, {});
 
-  if (Object.keys(filteredResults).length > 0) {
-    if (category === "beaches") {
-      fetchAndDisplayResults(category, filteredResults);
-    } else if (category === "towns") {
+  // Clear the previous results
+  resultsContainer.innerHTML = "";
+
+  if (category === "beaches") {
+    const selectedTown = Object.keys(filteredResults).find(filter => filter.startsWith("town-"));
+    if (selectedTown) {
+      // If a town filter is selected for beaches, fetch and display beaches by town
+      fetchAndDisplayResults(category, { town: selectedTown.replace("town-", "") });
+    } else {
+      // If no town filter is selected, fetch and display results based on the selected beach filters
       fetchAndDisplayResults(category, filteredResults);
     }
-  } else {
-    // No active filters, display original results
-    if (category === "beaches") {
-      fetchAndDisplayResults(category);
-    } else if (category === "towns") {
-      fetchAndDisplayResults(category);
-    }
+  } else if (category === "towns") {
+    // If the towns button is active, fetch and display results based on the selected town filters
+    fetchAndDisplayResults(category, filteredResults);
   }
 }
-
 
 function populateFilters(category) {
   filterContainer.innerHTML = "";
@@ -257,22 +227,22 @@ function populateFilters(category) {
     <button class="filter">🏞️ Cape Cod National Seashore</button>
     <button class="filter">🏝️ The Islands</button>
     <hr class="filter-divider">
-    <button class="filter" data-filter="Falmouth">🌊 Falmouth</button>
-    <button class="filter" data-filter="Bourne">⚓ Bourne</button>
-    <button class="filter" data-filter="Sandwich">🥪 Sandwich</button>
-    <button class="filter" data-filter="Barnstable">🐚 Barnstable</button>
-    <button class="filter" data-filter="Yarmouth">⛵ Yarmouth</button>
-    <button class="filter" data-filter="Dennis">🌅 Dennis</button>
-    <button class="filter" data-filter="Harwich">🐟 Harwich</button>
-    <button class="filter" data-filter="Brewster">🌿 Brewster</button>
-    <button class="filter" data-filter="Chatham">🦈 Chatham</button>
-    <button class="filter" data-filter="Orleans">🦞 Orleans</button>
-    <button class="filter" data-filter="Eastham">🌊 Eastham</button>
-    <button class="filter" data-filter="Wellfleet">🦪 Wellfleet</button>
-    <button class="filter" data-filter="Truro">🎨 Truro</button>
-    <button class="filter" data-filter="Provincetown">🌈 Provincetown</button>
-    <button class="filter" data-filter="Nantucket">⚓ Nantucket</button>
-    <button class="filter" data-filter="Martha's Vineyard">🍇 Martha's Vineyard</button>
+    <button class="filter" data-filter="town-Falmouth">🌊 Falmouth</button>
+    <button class="filter" data-filter="town-Bourne">⚓ Bourne</button>
+    <button class="filter" data-filter="town-Sandwich">🥪 Sandwich</button>
+    <button class="filter" data-filter="town-Barnstable">🐚 Barnstable</button>
+    <button class="filter" data-filter="town-Yarmouth">⛵ Yarmouth</button>
+    <button class="filter" data-filter="town-Dennis">🌅 Dennis</button>
+    <button class="filter" data-filter="town-Harwich">🐟 Harwich</button>
+    <button class="filter" data-filter="town-Brewster">🌿 Brewster</button>
+    <button class="filter" data-filter="town-Chatham">🦈 Chatham</button>
+    <button class="filter" data-filter="town-Orleans">🦞 Orleans</button>
+    <button class="filter" data-filter="town-Eastham">🌊 Eastham</button>
+    <button class="filter" data-filter="town-Wellfleet">🦪 Wellfleet</button>
+    <button class="filter" data-filter="town-Truro">🎨 Truro</button>
+    <button class="filter" data-filter="town-Provincetown">🌈 Provincetown</button>
+    <button class="filter" data-filter="town-Nantucket">⚓ Nantucket</button>
+    <button class="filter" data-filter="town-Martha's Vineyard">🍇 Martha's Vineyard</button>
   `;
   // Add click event listener to beach filter buttons
   const filterButtons = document.querySelectorAll(".filter");
@@ -340,44 +310,25 @@ function toggleFiltersSection(category) {
     filtersSection.classList.remove("active");
   }
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Event listener for filter buttons
-  filterContainer.addEventListener("click", (event) => {
-    if (event.target.classList.contains("filter")) {
+  const filterButtons = document.querySelectorAll(".filter");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
       const category = document.querySelector(".category-btn.active").getAttribute("data-category");
-      const filter = event.target.getAttribute("data-filter");
-      const town = event.target.getAttribute("data-town");
+      const filter = button.getAttribute("data-filter");
+      const town = button.getAttribute("data-town");
 
       if (filter) {
         activeFilters[filter] = !activeFilters[filter];
-        event.target.classList.toggle("active", activeFilters[filter]);
       } else if (town) {
-        if (activeFilters.town === town) {
-          delete activeFilters.town;
-          event.target.classList.remove("active");function applyFilters(category) {
-            const filteredResults = Object.entries(activeFilters).reduce((acc, [filterKey, isActive]) => {
-              if (isActive) {
-                acc[filterKey] = true;
-              }
-              return acc;
-            }, {});
-          
-            if (category === "beaches") {
-              fetchAndDisplayResults(category, filteredResults);
-            } else if (category === "towns") {
-              fetchAndDisplayResults(category, filteredResults);
-            }
-          }
-        } else {
-          activeFilters.town = town;
-          const townFilterButtons = document.querySelectorAll("[data-town]");
-          townFilterButtons.forEach((btn) => btn.classList.remove("active"));
-          event.target.classList.add("active");
-        }
+        activeFilters.town = town;
       }
 
       applyFilters(category);
-    }
+    });
   });
 });
 
