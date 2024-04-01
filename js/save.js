@@ -408,6 +408,7 @@ function getPlaceIdForItem(itemName, category) {
     });
   });
 }
+
 function lazyLoadImages() {
   const lazyImages = document.querySelectorAll(".lazy");
 
