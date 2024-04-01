@@ -11,8 +11,7 @@
 - add LLM-powered "Pick for Me" functionality
 <br>
 
-- write guides for all topics
-- enhance viewing and/or sharing of guides
+- write extensive guides for each town and output as pdf
 <br>
 
 - refine bucket list and add styling
