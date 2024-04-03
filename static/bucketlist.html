@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Cod Bucket List</title>
+  <link rel="stylesheet" href="../css/bucketlist.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../assets/logo.jpg" alt="Cape Cod Shell Out Logo">
+        </a>
+      </div>
+      <nav class="header-links">
+        <ul>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="itinerary.html">Itineraries</a></li>
+          <li><a href="mapmystay.html">Map My Stay</a></li>
+          <li><a href="bucketlist.html">Bucket List</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Cape Cod Bucket List</h1>
+    <div id="bucket-list-container"></div>
+  </div>
+
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.getJSON('../data/bucketlist/bucketlist.json', function(data) {
+        var container = $('#bucket-list-container');
+        data.forEach(function(category) {
+          var categoryElement = $('<div>').addClass('category');
+          var categoryTitle = $('<h2>').text(category.category);
+          var itemList = $('<ul>');
+
+          category.items.forEach(function(item) {
+            var itemElement = $('<li>').text(item.name);
+            var itemDescription = $('<p>').text(item.description);
+            itemElement.append(itemDescription);
+            itemList.append(itemElement);
+          });
+
+          categoryElement.append(categoryTitle, itemList);
+          container.append(categoryElement);
+        });
+      }).fail(function() {
+        console.log('Error loading bucket list data.');
+      });
+    });
+  </script>
+</body>
+</html>

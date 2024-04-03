@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/itinerary.css">
+  <title>🐟 Cape Cod Itineraries</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Create Your Personalized Cape Cod Itinerary</h1>
+    <form id="itineraryForm">
+      <div class="form-grid">
+        <div class="form-box">
+          <h2>Travel Details</h2>
+          <div class="form-group">
+            <label for="travelDates">Travel Dates:</label>
+            <div class="date-inputs">
+              <input type="date" id="startDate" name="startDate" required>
+              <span>to</span>
+              <input type="date" id="endDate" name="endDate" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="groupSize">Group Size:</label>
+            <input type="number" id="groupSize" name="groupSize" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="groupType">Group Type:</label>
+            <select id="groupType" name="groupType" required>
+              <option value="">Select...</option>
+              <option value="family">Family with Children</option>
+              <option value="couple">Couple</option>
+              <option value="solo">Solo Traveler</option>
+              <option value="friends">Group of Friends</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h2>Interests</h2>
+          <div class="form-group">
+            <label for="interests">Select Interests:</label>
+            <select id="interests" multiple name="interests" required>
+              <option value="outdoorActivities">Outdoor Activities</option>
+              <option value="culturalExperiences">Cultural Experiences</option>
+              <option value="foodAndDining">Food and Dining</option>
+              <option value="shopping">Shopping</option>
+              <option value="sports">Sports</option>
+              <option value="adventure">Adventure</option>
+              <option value="relaxation">Relaxation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h2>Preferences</h2>
+          <div class="form-group">
+            <label for="pace">Preferred Pace:</label>
+            <select id="pace" name="pace" required>
+              <option value="">Select...</option>
+              <option value="packed">Packed Itinerary</option>
+              <option value="moderate">Moderate</option>
+              <option value="relaxed">Relaxed with Downtime</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="accommodationType">Accommodation Type:</label>
+            <select id="accommodationType" name="accommodationType" required>
+              <option value="">Select...</option>
+              <option value="hotel">Hotel</option>
+              <option value="resort">Resort</option>
+              <option value="bnb">Bed and Breakfast</option>
+              <option value="rental">Vacation Rental</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="transportation">Transportation:</label>
+            <select id="transportation" name="transportation" required>
+              <option value="">Select...</option>
+              <option value="car">Car</option>
+              <option value="public">Public Transportation</option>
+              <option value="bike">Bike</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget" required>
+              <option value="">Select...</option>
+              <option value="budget">Budget</option>
+              <option value="midrange">Mid-range</option>
+              <option value="luxury">Luxury</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">Generate Itinerary</button>
+    </form>
+    <div id="itineraryResult"></div>
+  </div>
+  <script src="../../js/itinerary.js"></script>
+</body>
+</html>

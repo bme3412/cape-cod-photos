@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐟 Cape Cod: Towns, Beaches, Activities</title>
+  <link rel="stylesheet" href="../css/save.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="/fish.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="/static/index.html">
+          <img src="../assets/logo.jpg" alt="Cape Cod Shell Out Logo">
+        </a>
+      </div>
+      <nav class="header-links">
+        <ul>
+          <li><a href="/static/guides.html">Guides</a></li>
+          <li><a href="/static/itinerary.html">Itineraries</a></li>
+          <li><a href="/static/mapmystay.html">Map My Stay</a></li>
+          <li><a href="/static/bucketlist.html">Bucket List</a></li>
+          <li><a href="/static/about.html">About</a></li>
+         
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div id="category-buttons">
+      <button class="category-btn active" data-category="towns">
+        <i class="fas fa-map-marker-alt"></i> Towns
+      </button>
+      <button class="category-btn" data-category="beaches">
+        <i class="fas fa-umbrella-beach"></i> Beaches
+      </button>
+      <button class="category-btn" data-category="things-to-do">
+        <i class="fas fa-hiking"></i> Things to Do
+      </button>
+      <button class="category-btn" data-category="pick-for-me">
+        <i class="far fa-smile"></i> Pick For Me
+      </button>
+    </div>
+    
+    <div class="content">
+      <aside id="filters">
+        <div id="filter-container"></div>
+      </aside>
+      <main id="results">
+        <div id="results-container"></div>
+      </main>
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 Cape Cod Shell Out. All rights reserved.</p>
+  </footer>
+  
+  <script src="../js/save.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=API&libraries=places"></script>
+</body>
+</html>

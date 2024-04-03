@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐟 Cape Cod: Towns, Beaches, Activities</title>
+  <link rel="stylesheet" href="../css/save.css">
+  <link rel="stylesheet" href="../css/billboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="/fish.ico" type="image/x-icon">
+  <style>
+    .slideshow-slide img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-content">
+    <div class="logo">
+      <a href="index.html">
+        <img src="../assets/logo.jpg" alt="Cape Cod Shell Out Logo">
+      </a>
+    </div>
+    <nav class="header-links">
+      <ul>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">Itineraries</a></li>
+        <li><a href="#">Map My Stay</a></li>
+        <li><a href="/static/bucketlist.html">Bucket List</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- The rest of your page content here -->
+<div class="container">
+  <div id="category-buttons">
+    <button class="category-btn active" data-category="towns">
+      <i class="fas fa-map-marker-alt"></i> Towns
+    </button>
+    <button class="category-btn" data-category="beaches">
+      <i class="fas fa-umbrella-beach"></i> Beaches
+    </button>
+    <button class="category-btn" data-category="things-to-do">
+      <i class="fas fa-hiking"></i> Things to Do
+    </button>
+    <button class="category-btn" data-category="pick-for-me">
+      <i class="far fa-smile"></i> Pick For Me
+    </button>
+  </div>
+  
+  <!-- Slideshow container -->
+  <div id="slideshow-container">
+    <div class="slideshow-row">
+      <div class="slideshow-slide">
+        <img src="../assets/capecod1.png" alt="Cape Cod 1">
+      </div>
+      <div class="slideshow-slide">
+        <img src="../assets/capecod2.png" alt="Cape Cod 2">
+      </div>
+      <div class="slideshow-slide">
+        <img src="../assets/capecod3.png" alt="Cape Cod 3">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <aside id="filters">
+      <div id="filter-container"></div>
+    </aside>
+    <main id="results">
+      <div id="results-container"></div>
+    </main>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Cape Cod Shell Out. All rights reserved.</p>
+</footer>
+
+<script>
+    var slideIndex = 0;
+    var slideTimeout = 4000; // Change image every 4 seconds
+    var slideDuration = 2000; // Duration of each slide rotation
+    var slides = document.getElementsByClassName("slideshow-slide");
+    var images = ["../assets/capecod4.png", "../assets/capecod5.png", "../assets/capecod6.png"];
+    var previousImage = null;
+    var slideshowContainer = document.getElementById("slideshow-container");
+    var categoryButtons = document.querySelectorAll(".category-btn");
+    var filtersContainer = document.getElementById("filters");
+    var resultsContainer = document.getElementById("results");
+    
+    showSlides();
+    
+    function showSlides() {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+    
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+    
+      var activeSlide = document.querySelector(`.slideshow-row .slideshow-slide:nth-child(${slideIndex})`);
+      activeSlide.classList.add("active");
+    
+      setTimeout(() => {
+        var randomImage;
+        do {
+          randomImage = images[Math.floor(Math.random() * images.length)];
+        } while (randomImage === previousImage);
+    
+        previousImage = randomImage;
+        activeSlide.querySelector("img").src = randomImage;
+    
+        setTimeout(() => {
+          activeSlide.classList.remove("active");
+          activeSlide.querySelector("img").src = `../assets/capecod${slideIndex}.png`;
+        }, slideDuration - 500); // Change image 500ms before the end of the rotation
+      }, slideTimeout - slideDuration + 500); // Start changing image 500ms before the end of the rotation
+    
+      setTimeout(showSlides, slideTimeout);
+    }
+    
+    categoryButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Gradually fade out the active capecod image
+    var activeSlide = document.querySelector(".slideshow-slide.active");
+    activeSlide.style.opacity = 0;
+    activeSlide.style.transition = "opacity 1s";
+
+    // Hide the slideshow container after the fade-out transition
+    setTimeout(() => {
+      slideshowContainer.style.display = "none";
+    }, 1000);
+
+    // Load the external scripts
+    setTimeout(() => {
+      var saveScript = document.createElement("script");
+      saveScript.src = "../js/save.js";
+      document.body.appendChild(saveScript);
+
+      var mapsScript = document.createElement("script");
+      mapsScript.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDhCa4KFoWHaFKpaRxEoY2DKo49xYTLR-A&libraries=places";
+      mapsScript.async = true;
+      mapsScript.defer = true;
+      document.body.appendChild(mapsScript);
+
+      // Show the filter buttons and photo grid after the scripts are loaded
+      saveScript.onload = function() {
+        filtersContainer.style.display = "block";
+        resultsContainer.style.display = "block";
+      };
+    }, 1000);
+  });
+});
+</script>
+  <script src="../js/save.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=API&libraries=places"></script>
+</body>
+</html>

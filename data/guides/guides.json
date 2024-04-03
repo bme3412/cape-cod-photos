@@ -6,54 +6,101 @@
   },
   {
     "id": "modal2",
-    "title": "Accommodation Guides",
+    "title": "Accommodation",
     "content": "<p>Cape Cod offers a wide range of accommodation options to suit every traveler's preferences and budget. Whether you're looking for a luxurious hotel, a cozy bed and breakfast, or a vacation rental property, you'll find plenty of choices across the Cape. Here are some insights to help you decide where to stay:</p><h3>Hotels:</h3><p>Cape Cod has a variety of hotels, from high-end resorts to budget-friendly options. Many hotels are located in popular towns like Hyannis, Falmouth, and Provincetown. Consider factors such as location, amenities, and seasonality when booking a hotel.</p><h3>Bed and Breakfasts (B&Bs):</h3><p>For a more intimate and charming experience, consider staying at a bed and breakfast. B&Bs are often housed in historic buildings and offer personalized service, homemade breakfasts, and a unique atmosphere. You can find B&Bs throughout Cape Cod, particularly in scenic areas like Chatham and Yarmouth.</p><h3>Vacation Rentals:</h3><p>Vacation rentals, including houses, cottages, and apartments, are a popular choice for families and groups. They offer more space, privacy, and flexibility compared to hotels. Rental properties are available in various sizes and styles, from beachfront homes to quaint cottages. Popular websites like Airbnb and VRBO have a wide selection of vacation rentals across Cape Cod.</p><h3>Budget Considerations:</h3><p>Accommodation prices in Cape Cod vary depending on factors such as location, season, and amenities. Peak season (June to August) tends to have higher prices, while shoulder seasons (April to May and September to October) offer more affordable rates. Consider booking in advance to secure better deals and availability.</p><p>Regardless of your chosen accommodation type, it's essential to research and compare options to find the best fit for your needs and budget. Read reviews, check amenities, and consider factors like proximity to attractions and beaches to ensure a memorable stay in Cape Cod.</p>"
   },
   {
     "id": "modal3",
-    "title": "Guides for Each Town",
     "content": [
       {
-        "town": "Provincetown",
-        "tagline": "<h3>Discover the vibrant art scene, stunning beaches, and inclusive culture of Provincetown.</h3>",
-        "description": "<p>Provincetown, located at the tip of Cape Cod, is known for its thriving art community, beautiful beaches, and LGBTQ+ friendly atmosphere. Explore the colorful Commercial Street, visit art galleries, and enjoy the lively nightlife. Don't miss the Pilgrim Monument and the Cape Cod National Seashore.</p>",
-        "pdfLink": "../assets/guides/provincetown_guide.pdf"
+        "town": "Falmouth",
+        "tagline": "<h3>Experience the coastal allure of Falmouth, where adventure meets relaxation.</h3>",
+        "description": "<p>Falmouth is a charming coastal town with beautiful beaches, scenic bike trails, and a vibrant downtown. Visit Old Silver Beach, cycle along the Shining Sea Bikeway, and explore the historic Highfield Hall & Gardens. Enjoy fresh seafood at local restaurants and take a stroll through the charming Queen's Buyway shops.</p>",
+        "pdfLink": "../assets/guides/falmouth_guide.pdf"
+      },
+      {
+        "town": "Bourne",
+        "tagline": "<h3>Discover Bourne's rich heritage and stunning natural landscapes.</h3>",
+        "description": "<p>Bourne, located at the western end of Cape Cod, is known for its scenic beauty, historic sites, and outdoor recreational opportunities. Visit the Cape Cod Canal Visitor Center, explore the Aptucxet Trading Post Museum, and enjoy the beautiful beaches of Scusset Beach State Reservation. Take a scenic drive along the Cape Cod Canal or go fishing at the Bourne Scenic Park.</p>",
+        "pdfLink": "../assets/guides/bourne_guide.pdf"
+      },
+      {
+        "town": "Sandwich",
+        "tagline": "<h3>Uncover the timeless charm and history of Sandwich, Cape Cod's oldest town.</h3>",
+        "description": "<p>Sandwich, the oldest town on Cape Cod, is known for its historic sites, beautiful beaches, and charming downtown. Visit the Heritage Museums & Gardens, explore the Sandwich Glass Museum, and take a stroll along the Sandwich Boardwalk. Enjoy the tranquil beauty of the Shawme-Crowell State Forest and discover the town's rich history at the Hoxie House.</p>",
+        "pdfLink": "../assets/guides/sandwich_guide.pdf"
+      },
+      {
+        "town": "Mashpee",
+        "tagline": "<h3>Immerse yourself in the natural splendor and cultural heritage of Mashpee.</h3>",
+        "description": "<p>Mashpee is a town with a strong Native American heritage, beautiful natural scenery, and plenty of outdoor activities. Visit the Mashpee Wampanoag Indian Museum, explore the South Cape Beach State Park, and shop at the open-air Mashpee Commons. Play a round of golf at the Mashpee Willows Golf Course or take a scenic hike along the Mashpee River Woodlands Trail.</p>",
+        "pdfLink": "../assets/guides/mashpee_guide.pdf"
+      },
+      {
+        "town": "Barnstable",
+        "tagline": "<h3>Journey through history and indulge in coastal delights in Barnstable.</h3>",
+        "description": "<p>Barnstable, the largest town on Cape Cod, encompasses seven villages, each with its own unique character. Visit the John F. Kennedy Hyannis Museum, explore the historic Barnstable Village, and enjoy the beautiful beaches of Sandy Neck Beach Park. Attend a concert at the Cape Cod Melody Tent or take a harbor cruise from Hyannis.</p>",
+        "pdfLink": "../assets/guides/barnstable_guide.pdf"
+      },
+      {
+        "town": "Yarmouth",
+        "tagline": "<h3>Create unforgettable memories in Yarmouth, a playground for all ages.</h3>",
+        "description": "<p>Yarmouth is a perfect destination for families, offering a variety of activities and attractions. Visit the Whydah Pirate Museum, spend a day at the Inflatable Park, and enjoy mini-golf at Pirates Cove. Relax on the sandy beaches of Seagull Beach and explore the trails of the Bass Hole Boardwalk.</p>",
+        "pdfLink": "../assets/guides/yarmouth_guide.pdf"
+      },
+      {
+        "town": "Dennis",
+        "tagline": "<h3>Embrace the artistic soul and natural beauty of Dennis.</h3>",
+        "description": "<p>Dennis is a charming town with picturesque villages, beautiful beaches, and a thriving arts scene. Visit the Cape Cod Museum of Art, explore the beautiful gardens at the Josiah Dennis Manse, and enjoy the sun and surf at Mayflower Beach. Attend a performance at the Cape Playhouse, the oldest professional summer theatre in the United States.</p>",
+        "pdfLink": "../assets/guides/dennis_guide.pdf"
       },
       {
         "town": "Chatham",
-        "tagline": "<h3>Experience the charm and elegance of Chatham, a picturesque coastal town.</h3>",
+        "tagline": "<h3>Savor the coastal elegance and timeless appeal of Chatham.</h3>",
         "description": "<p>Chatham is a quintessential New England town with a charming Main Street, historic lighthouse, and beautiful beaches. Visit the Chatham Lighthouse, stroll through the boutiques and art galleries, and savor fresh seafood at local restaurants. Take a scenic drive along Shore Road and enjoy the stunning ocean views.</p>",
         "pdfLink": "../assets/guides/chatham_guide.pdf"
       },
       {
-        "town": "Hyannis",
-        "tagline": "<h3>Explore the hub of Cape Cod: Hyannis, where entertainment and history meet.</h3>",
-        "description": "<p>Hyannis, the largest town in Cape Cod, offers a perfect blend of entertainment, shopping, and history. Visit the John F. Kennedy Hyannis Museum, enjoy live music at the Cape Cod Melody Tent, and shop at the Main Street boutiques. Take a harbor cruise or ferry to nearby Nantucket or Martha's Vineyard.</p>",
-        "pdfLink": "../assets/guides/hyannis_guide.pdf"
-      },
-      {
-        "town": "Falmouth",
-        "tagline": "<h3>Unwind in the picturesque town of Falmouth, known for its stunning beaches and outdoor activities.</h3>",
-        "description": "<p>Falmouth is a charming coastal town with beautiful beaches, scenic bike trails, and a vibrant downtown. Visit Old Silver Beach, cycle along the Shining Sea Bikeway, and explore the historic Highfield Hall &amp; Gardens. Enjoy fresh seafood at local restaurants and take a stroll through the charming Queen's Buyway shops.</p>",
-        "pdfLink": "../assets/guides/falmouth_guide.pdf"
-      },
-      {
-        "town": "Wellfleet",
-        "tagline": "<h3>Immerse yourself in the natural beauty and artistic spirit of Wellfleet.</h3>",
-        "description": "<p>Wellfleet is a haven for nature lovers and art enthusiasts. Explore the pristine beaches of the Cape Cod National Seashore, visit the Wellfleet Bay Wildlife Sanctuary, and gallery-hop along the vibrant Main Street. Don't miss the famous Wellfleet Oyster Festival in the fall.</p>",
-        "pdfLink": "../assets/guides/wellfleet_guide.pdf"
+        "town": "Harwich",
+        "tagline": "<h3>Escape to the tranquil charm of Harwich, where the sea meets the shore.</h3>",
+        "description": "<p>Harwich is a picturesque town with beautiful beaches, scenic harbors, and a rich cranberry-growing heritage. Visit the Harwich Historical Society Museum, explore the Cape Cod Lavender Farm, and enjoy the warm waters of Red River Beach. Take a scenic bike ride along the Cape Cod Rail Trail.</p>",
+        "pdfLink": "../assets/guides/harwich_guide.pdf"
       },
       {
         "town": "Brewster",
-        "tagline": "<h3>Step back in time and relax in the quaint town of Brewster.</h3>",
+        "tagline": "<h3>Journey through Brewster's captivating past and serene present.</h3>",
         "description": "<p>Brewster, known as the \"Sea Captain's Town,\" offers a glimpse into Cape Cod's rich maritime history. Visit the Brewster Historical Society Museum, explore the antique shops along Route 6A, and enjoy the serene beauty of Breakwater Beach. Play a round of golf at the renowned Cape Cod National Golf Club.</p>",
         "pdfLink": "../assets/guides/brewster_guide.pdf"
       },
       {
-        "town": "Yarmouth",
-        "tagline": "<h3>Family-friendly fun and endless adventures await in Yarmouth.</h3>",
-        "description": "<p>Yarmouth is a perfect destination for families, offering a variety of activities and attractions. Visit the Whydah Pirate Museum, spend a day at the Inflatable Park, and enjoy mini-golf at Pirates Cove. Relax on the sandy beaches of Seagull Beach and explore the trails of the Bass Hole Boardwalk.</p>",
-        "pdfLink": "../assets/guides/yarmouth_guide.pdf"
+        "town": "Orleans",
+        "tagline": "<h3>Embark on an unforgettable adventure in the vibrant town of Orleans.</h3>",
+        "description": "<p>Orleans is a vibrant town with beautiful beaches, historic sites, and plenty of outdoor activities. Visit Nauset Beach, explore the Cape Cod Rail Trail, and discover the town's rich history at the Orleans Historical Society Museum. Enjoy fresh seafood at local restaurants and shop at the unique boutiques along Main Street.</p>",
+        "pdfLink": "../assets/guides/orleans_guide.pdf"
+      },
+      {
+        "town": "Eastham",
+        "tagline": "<h3>Uncover the untouched beauty and rich history of Eastham.</h3>",
+        "description": "<p>Eastham is home to the Cape Cod National Seashore and its stunning beaches, including Coast Guard Beach and Nauset Light Beach. Visit the Three Sisters Lighthouses, explore the Salt Pond Visitor Center, and enjoy the tranquil beauty of the Fort Hill Rural Historic District.</p>",
+        "pdfLink": "../assets/guides/eastham_guide.pdf"
+      },
+      {
+        "town": "Wellfleet",
+        "tagline": "<h3>Unleash your creativity and embrace nature's wonders in Wellfleet.</h3>",
+        "description": "<p>Wellfleet is a haven for nature lovers and art enthusiasts. Explore the pristine beaches of the Cape Cod National Seashore, visit the Wellfleet Bay Wildlife Sanctuary, and gallery-hop along the vibrant Main Street. Don't miss the famous Wellfleet Oyster Festival in the fall.</p>",
+        "pdfLink": "../assets/guides/wellfleet_guide.pdf"
+      },
+      {
+        "town": "Truro",
+        "tagline": "<h3>Find your bliss in the serene landscapes and artistic haven of Truro.</h3>",
+        "description": "<p>Truro is a small, picturesque town known for its pristine beaches, rolling hills, and stunning natural landscapes. Visit the Highland Lighthouse, explore the Cape Cod National Seashore, and discover the town's rich artistic heritage at the Truro Center for the Arts at Castle Hill.</p>",
+        "pdfLink": "../assets/guides/truro_guide.pdf"
+      },
+      {
+        "town": "Provincetown",
+        "tagline": "<h3>Celebrate diversity and embrace the vibrant spirit of Provincetown.</h3>",
+        "description": "<p>Provincetown, located at the tip of Cape Cod, is known for its thriving art community, beautiful beaches, and LGBTQ+ friendly atmosphere. Explore the colorful Commercial Street, visit art galleries, and enjoy the lively nightlife. Don't miss the Pilgrim Monument and the Cape Cod National Seashore.</p>",
+        "pdfLink": "../assets/guides/provincetown_guide.pdf"
       }
     ]
   },
@@ -69,17 +116,17 @@
   },
   {
     "id": "modal6",
-    "title": "Seasonal Events & Festivals",
+    "title": "Events & Festivals",
     "content": "<h3>Experience the Magic of Summer on Cape Cod</h3><p>Summer on Cape Cod is filled with a vibrant array of events and festivals that celebrate the region's culture, cuisine, and natural beauty. Here are some noteworthy summer events:</p><ul><li><strong>Provincetown International Film Festival</strong><br>Date: June<br>Website: <a href='https://provincetownfilm.org/festival/' target='_blank'>https://provincetownfilm.org/festival/</a></li><li><strong>Cape Cod Hydrangea Festival</strong><br>Date: July<br>Website: <a href='https://capecodchamber.org/hydrangea-fest/' target='_blank'>https://capecodchamber.org/hydrangea-fest/</a></li><li><strong>Barnstable County Fair</strong><br>Date: July<br>Website: <a href='https://capecodfairgrounds.com/events/barnstable-county-fair/' target='_blank'>https://capecodfairgrounds.com/events/barnstable-county-fair/</a></li><li><strong>Yarmouth Summer Celebration</strong><br>Date: July<br>Website: <a href='https://yarmouthsummercelebration.com/' target='_blank'>https://yarmouthsummercelebration.com/</a></li><li><strong>Cape Cod Jazz Festival</strong><br>Date: August<br>Website: <a href='https://www.artsfoundation.org/jazz-festival' target='_blank'>https://www.artsfoundation.org/jazz-festival</a></li><li><strong>Falmouth Road Race</strong><br>Date: August<br>Website: <a href='https://falmouthroadrace.com/' target='_blank'>https://falmouthroadrace.com/</a></li><li><strong>Cape Cod Brew Fest</strong><br>Date: September<br>Website: <a href='https://www.capecodbrewfest.com/' target='_blank'>https://www.capecodbrewfest.com/</a></li></ul><p>These events showcase the best of Cape Cod's arts, culture, and outdoor activities. Be sure to check the official websites for specific dates, locations, and ticket information when planning your summer visit.</p>"
   },
   {
     "id": "modal7",
-    "title": "What to do on a Rainy Day",
+    "title": "When It Rains",
     "content": "<h3>Explore Indoor Activities on Cape Cod</h3><p>Don't let a rainy day dampen your spirits! Cape Cod offers plenty of indoor activities to keep you entertained. Here are some ideas:</p><ul><li><strong>Visit Museums</strong><br>- Cape Cod Museum of Art (<a href='https://ccmoa.org/' target='_blank'>https://ccmoa.org/</a>)<br>- John F. Kennedy Hyannis Museum (<a href='https://www.jfkhyannismuseum.org/' target='_blank'>https://www.jfkhyannismuseum.org/</a>)<br>- Sandwich Glass Museum (<a href='https://sandwichglassmuseum.org/' target='_blank'>https://sandwichglassmuseum.org/</a>)</li><li><strong>Explore Local Shops</strong><br>- Main Street, Hyannis<br>- Commercial Street, Provincetown<br>- Mashpee Commons (<a href='https://mashpeecommons.com/' target='_blank'>https://mashpeecommons.com/</a>)</li><li><strong>Enjoy Indoor Entertainment</strong><br>- Cape Cod Mall, Hyannis (<a href='https://www.simon.com/mall/cape-cod-mall' target='_blank'>https://www.simon.com/mall/cape-cod-mall</a>)<br>- Ryan Family Amusements, Yarmouth (<a href='https://ryanfamily.com/' target='_blank'>https://ryanfamily.com/</a>)<br>- Wackenhammer's Clockwork Arcade, Hyannis (<a href='https://www.wackenhammers.com/' target='_blank'>https://www.wackenhammers.com/</a>)</li><li><strong>Indulge in Local Cuisine</strong><br>- Seafood Restaurants<br>- Cozy Cafes<br>- Craft Breweries</li></ul><p>A rainy day on Cape Cod is a perfect opportunity to explore the region's indoor attractions, shop for unique souvenirs, and savor the local cuisine. Embrace the slower pace and make the most of your time indoors!</p>"
   },
   {
     "id": "modal8",
-    "title": "Cape Cod Baseball League",
+    "title": "Cape Baseball League",
     "content": "<h3>Experience the Excitement of the Cape Cod Baseball League</h3><p>The Cape Cod Baseball League (CCBL) is a prestigious collegiate summer baseball league that attracts top talent from across the country. Here's what you need to know:</p><ul><li><strong>About the League</strong><br>The CCBL is a 10-team league featuring some of the nation's best college baseball players. The league has a long history dating back to 1885 and has produced numerous Major League Baseball stars.</li><li><strong>Teams and Locations</strong><br>- Bourne Braves (<a href='https://bournebraves.org/' target='_blank'>https://bournebraves.org/</a>)<br>- Brewster Whitecaps (<a href='https://whitecaps-baseball.com/' target='_blank'>https://whitecaps-baseball.com/</a>)<br>- Chatham Anglers (<a href='https://chathamanglers.com/' target='_blank'>https://chathamanglers.com/</a>)<br>- Cotuit Kettleers (<a href='https://kettleers.org/' target='_blank'>https://kettleers.org/</a>)<br>- Falmouth Commodores (<a href='https://falmouthcommodores.com/' target='_blank'>https://falmouthcommodores.com/</a>)<br>- Harwich Mariners (<a href='https://harwichmariners.org/' target='_blank'>https://harwichmariners.org/</a>)<br>- Hyannis Harbor Hawks (<a href='https://harborhawks.org/' target='_blank'>https://harborhawks.org/</a>)<br>- Orleans Firebirds (<a href='https://orleansfirebirds.com/' target='_blank'>https://orleansfirebirds.com/</a>)<br>- Wareham Gatemen (<a href='https://gatemen.org/' target='_blank'>https://gatemen.org/</a>)<br>- Yarmouth-Dennis Red Sox (<a href='https://ydredsox.com/' target='_blank'>https://ydredsox.com/</a>)</li><li><strong>Schedule and Tickets</strong><br>The CCBL season runs from mid-June to early August, with games played daily. Tickets are affordable and can be purchased at the gate or through team websites.</li><li><strong>Experience</strong><br>Attending a CCBL game is a quintessential Cape Cod summer experience. Enjoy the relaxed atmosphere, cheer on the talented players, and soak in the beautiful surroundings of the Cape's historic ballparks.</li></ul><p>Don't miss the chance to witness future MLB stars in action! Check the league schedule and catch a game or two during your Cape Cod visit.</p>"
   },
   {
@@ -94,12 +141,35 @@
   },
   {
     "id": "modal11",
-    "title": "Getting Out (Leaving the Cape)",
+    "title": "Getting Out",
     "content": "<h3>Leaving Cape Cod: Transportation Options and Tips</h3><p>When it's time to say goodbye to Cape Cod, you have several transportation options to choose from. Here's a guide to help you plan your departure:</p><ul><li><strong>By Car</strong><br>- If you're driving, plan your route and check traffic conditions before leaving, especially during peak travel times.<br>- Be prepared for potential delays at the Sagamore Bridge and Bourne Bridge, which connect the Cape to the mainland.<br>- Consider taking Route 6 (Mid-Cape Highway) or Route 28 (Falmouth Highway) to exit the Cape, depending on your destination.</li><li><strong>By Bus</strong><br>- Bus companies such as Plymouth & Brockton Street Railway Company and Peter Pan Bus Lines offer service from various Cape Cod towns to destinations like Boston, Providence, and New York City.<br>- Check bus schedules and book your tickets in advance to ensure a smooth departure.</li><li><strong>By Ferry</strong><br>- If you're heading to Nantucket or Martha's Vineyard, you can take a ferry from Hyannis, Harwich Port, or Woods Hole.<br>- Ferry schedules vary by season, so check the timetables and make reservations ahead of time.</li><li><strong>By Plane</strong><br>- If you're flying out of Cape Cod, Barnstable Municipal Airport (HYA) in Hyannis offers flights to destinations like Boston, New York City, and Nantucket.<br>- For international flights or a wider selection of destinations, you may need to travel to Boston Logan International Airport (BOS) or T.F. Green Airport (PVD) in Providence, Rhode Island.</li></ul><p>Regardless of your transportation choice, be sure to plan ahead, allow extra time for potential delays, and check the latest schedules and updates before your departure.</p><p>For more information on transportation options and schedules, visit the <a href='https://www.capecodchamber.org/getting-around-cape-cod/' target='_blank'>Cape Cod Chamber of Commerce website</a>.</p>"
   },
   {
     "id": "modal12",
     "title": "Books, Music & Film",
     "content": "<h3>Discover Cape Cod through Books, Music, and Film</h3><p>Immerse yourself in the rich cultural heritage of Cape Cod through its literature, music, and film. Here are some recommendations to enhance your experience:</p><ul><li><strong>Books</strong><br>- \"The Outermost House\" by Henry Beston<br>- \"Cape Cod\" by Henry David Thoreau<br>- \"The Old Man and the Sea\" by Ernest Hemingway<br>- \"Remaining on the Vine\" by Jane Willan<br>- \"Cape Cod Noir\" by David L. Ulin (Editor)</li><li><strong>Music</strong><br>- Cape Cod Chamber Music Festival (<a href='https://capecodchambermusic.org/' target='_blank'>https://capecodchambermusic.org/</a>)<br>- Payomet Performing Arts Center (<a href='https://payomet.org/' target='_blank'>https://payomet.org/</a>)<br>- Cape Cod Jazz Festival (<a href='https://www.artsfoundation.org/jazz-festival' target='_blank'>https://www.artsfoundation.org/jazz-festival</a>)<br>- Local music venues and bars featuring live performances</li><li><strong>Film</strong><br>- \"Summer Catch\" (2001)<br>- \"The Golden Boys\" (2008)<br>- \"The Lightkeepers\" (2009)<br>- \"The Finest Hours\" (2016)<br>- Woods Hole Film Festival (<a href='https://www.woodsholefilmfestival.org/' target='_blank'>https://www.woodsholefilmfestival.org/</a>)<br>- Provincetown International Film Festival (<a href='https://provincetownfilm.org/festival/' target='_blank'>https://provincetownfilm.org/festival/</a>)</li></ul><p>These books, music events, and films offer a glimpse into the unique culture, history, and beauty of Cape Cod. Explore local bookstores, attend live music performances, and keep an eye out for film festivals and screenings during your visit.</p><p>For more information on cultural events and attractions, visit the <a href='https://www.capecodchamber.org/arts-culture/' target='_blank'>Cape Cod Chamber of Commerce website</a>.</p>"
+  },
+  {
+    "id": "modal13",
+    "title": "Getting to the Islands",
+    "content": "<h3>Traveling to Nantucket and Martha's Vineyard</h3><p>Nantucket and Martha's Vineyard are two beautiful islands off the coast of Cape Cod. Here's how to get there:</p><ul><li><strong>Ferries</strong><br>- Steamship Authority: Operates ferries from Woods Hole to Martha's Vineyard and from Hyannis to Nantucket (<a href='https://www.steamshipauthority.com/' target='_blank'>https://www.steamshipauthority.com/</a>)<br>- Hy-Line Cruises: Offers passenger-only ferries from Hyannis to Nantucket and Martha's Vineyard (<a href='https://hylinecruises.com/' target='_blank'>https://hylinecruises.com/</a>)</li><li><strong>Flights</strong><br>- Nantucket Memorial Airport (ACK): Served by major airlines and local carriers (<a href='https://www.nantucketairport.com/' target='_blank'>https://www.nantucketairport.com/</a>)<br>- Martha's Vineyard Airport (MVY): Served by major airlines and local carriers (<a href='https://mvyairport.com/' target='_blank'>https://mvyairport.com/</a>)</li></ul><p>Book your transportation in advance, especially during peak summer months, to ensure availability. Once on the islands, you can explore by car, bike, or public transportation.</p>"
+  },
+
+  {
+    "id": "modal14",
+    "title": "Best of Nantucket",
+    "content": "<h3>Discover the Best of Nantucket Island</h3><p>Nantucket is a charming island with pristine beaches, historic sites, and a vibrant dining and shopping scene. Here are some top attractions and activities:</p><ul><li><strong>Beaches</strong><br>- Surfside Beach<br>- Jetties Beach<br>- Madaket Beach<br>- Cisco Beach</li><li><strong>Historic Sites</strong><br>- Whaling Museum (<a href='https://www.nha.org/visit/whaling-museum/' target='_blank'>https://www.nha.org/visit/whaling-museum/</a>)<br>- Brant Point Lighthouse<br>- Oldest House (Jethro Coffin House)<br>- Old Mill</li><li><strong>Outdoor Activities</strong><br>- Biking the Nantucket Bike Paths<br>- Fishing charters and excursions<br>- Sailing and boating<br>- Golfing at Miacomet Golf Course or Nantucket Golf Club</li><li><strong>Shopping and Dining</strong><br>- Main Street and Downtown Nantucket<br>- Cisco Brewers (<a href='https://ciscobrewers.com/' target='_blank'>https://ciscobrewers.com/</a>)<br>- Brant Point Grill at the White Elephant Hotel</li></ul><p>Don't miss the annual Nantucket Daffodil Festival in April and the Nantucket Wine & Food Festival in May. Book accommodations early, as lodging options can be limited during peak seasons.</p>"
+  },
+
+  {
+    "id": "modal15",
+    "title": "Martha's Vineyard",
+    "content": "<h3>Explore the Beauty of Martha's Vineyard</h3><p>Martha's Vineyard is a picturesque island known for its stunning beaches, charming towns, and laid-back atmosphere. Here are some must-see attractions and activities:</p><ul><li><strong>Beaches</strong><br>- South Beach (Katama Beach)<br>- Menemsha Beach<br>- Aquinnah Cliffs and Beach<br>- Oak Bluffs Town Beach</li><li><strong>Towns and Villages</strong><br>- Edgartown: Historic whaling village with elegant homes and boutiques<br>- Oak Bluffs: Victorian cottages, lively harbor, and famous gingerbread houses<br>- Vineyard Haven: Main port of entry and charming town center<br>- Aquinnah: Home to the Gay Head Cliffs and Aquinnah Lighthouse</li><li><strong>Outdoor Activities</strong><br>- Biking the island's extensive bike paths<br>- Hiking in the Manuel F. Correllus State Forest<br>- Kayaking and paddleboarding<br>- Golfing at Farm Neck Golf Club or Mink Meadows Golf Club</li><li><strong>Attractions and Events</strong><br>- Martha's Vineyard Museum (<a href='https://mvmuseum.org/' target='_blank'>https://mvmuseum.org/</a>)<br>- Cottage Museum and Cottage City Historic District Walking Tours<br>- Martha's Vineyard Agricultural Fair (August)<br>- Martha's Vineyard Food & Wine Festival (October)</li></ul><p>To make the most of your visit, consider renting a car or bringing your vehicle on the ferry to explore the island's many attractions and hidden gems.</p>"
+  },
+
+  {
+    "id": "modal16",
+    "title": "Sports & Exercise",
+    "content": "<h3>Stay Active and Enjoy Sports on Cape Cod</h3><p>Cape Cod offers a wide range of sports and exercise activities for all ages and fitness levels. Here are some popular options:</p><ul><li><strong>Golf</strong><br>- Cape Cod National Golf Club (Brewster)<br>- Bayberry Hills Golf Course (West Yarmouth)<br>- The Golf Club at Yarmouthport<br>- The Captains Golf Course (Brewster)</li><li><strong>Water Sports</strong><br>- Surfing at Coast Guard Beach or Nauset Beach<br>- Kayaking and paddleboarding in Pleasant Bay or Bass River<br>- Windsurfing and kiteboarding in Wellfleet and Buzzards Bay<br>- Fishing charters and excursions</li><li><strong>Biking and Hiking</strong><br>- Cape Cod Rail Trail: 22-mile paved bike path from Dennis to Wellfleet<br>- Shining Sea Bikeway: 10.7-mile paved bike path in Falmouth<br>- Great Island Trail: 8-mile hiking loop in Wellfleet<br>- Beebe Woods: 400-acre nature preserve with hiking trails in Falmouth</li><li><strong>Tennis and Pickleball</strong><br>- Barnstable Recreation Department Tennis Courts<br>- Falmouth Heights Tennis Club<br>- Dennis Highlands Tennis Club<br>- Pickleball courts at various towns and community centers</li></ul><p>Many towns on Cape Cod also have local sports leagues, fitness centers, and yoga studios. Check with the local recreation departments or search online for more information on sports and exercise options during your visit.</p>"
   }
 ]

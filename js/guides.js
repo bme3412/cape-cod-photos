@@ -1,85 +1,112 @@
-// Function to create a modal element
-function createModal(modal) {
-  var modalElement = document.createElement('div');
-  modalElement.id = modal.id;
-  modalElement.className = 'modal';
+document.addEventListener("DOMContentLoaded", function() {
+  const guides = document.querySelectorAll(".guide");
+  const modalContainer = document.getElementById("modal-container");
 
-  var modalContent = document.createElement('div');
-  modalContent.className = 'modal-content';
+  guides.forEach(function(guide) {
+    guide.addEventListener("click", function() {
+      const modalId = this.getAttribute("data-modal");
 
-  var closeButton = document.createElement('span');
-  closeButton.className = 'close';
-  closeButton.innerHTML = '&times;';
-  closeButton.addEventListener('click', function() {
-    modalElement.style.display = 'none';
+      fetch("../data/guides/guides.json")
+        .then(response => response.json())
+        .then(data => {
+          const modalData = data.find(modal => modal.id === modalId);
+          if (modalData) {
+            if (modalId === "modal3") {
+              const modal3 = createModal3(modalData);
+              modalContainer.appendChild(modal3);
+              modal3.style.display = "block";
+            } else {
+              const modal = createModal(modalData);
+              modalContainer.appendChild(modal);
+              modal.style.display = "block";
+            }
+          }
+        })
+        .catch(error => {
+          console.log('Error fetching JSON data:', error);
+        });
+    });
   });
 
-  var title = document.createElement('h2');
-  title.textContent = modal.title;
+  function createModal3(data) {
+    const modal3 = document.createElement("div");
+    modal3.id = "modal3";
+    modal3.classList.add("modal");
 
-  var contentWrapper = document.createElement('div');
-  
-  if (modal.id === 'modal3') {
-    // Handle the "Guides for Each Town" modal
-    modal.content.forEach(function(townGuide) {
-      var townElement = document.createElement('div');
-      townElement.className = 'town-guide';
+    const modalContent = document.createElement("div");
+    modalContent.classList.add("modal-content");
 
-      var townName = document.createElement('h3');
-      townName.textContent = townGuide.town;
+    const closeButton = document.createElement("span");
+    closeButton.classList.add("close");
+    closeButton.innerHTML = "&times;";
+    closeButton.addEventListener("click", function() {
+      modal3.style.display = "none";
+    });
 
-      var tagline = document.createElement('div');
-      tagline.innerHTML = townGuide.tagline;
+    const title = document.createElement("h2");
+    title.textContent = "Guides for Each Town";
 
-      var description = document.createElement('div');
+    const townGuidesContainer = document.createElement("div");
+    townGuidesContainer.id = "town-guides-container";
+
+    data.content.forEach(function(townGuide) {
+      const townElement = document.createElement("div");
+      townElement.classList.add("town-guide");
+
+      const townName = document.createElement("h3");
+      townName.classList.add("town-tagline");
+      townName.innerHTML = townGuide.tagline;
+
+      const description = document.createElement("div");
+      description.classList.add("town-description");
       description.innerHTML = townGuide.description;
 
-      var pdfLink = document.createElement('a');
-      pdfLink.className = 'pdf-link';
+      const pdfLink = document.createElement("a");
+      pdfLink.classList.add("town-pdf-link");
       pdfLink.href = townGuide.pdfLink;
-      pdfLink.textContent = 'Download PDF Guide';
+      pdfLink.textContent = `Download ${townGuide.town} Guide`;
 
       townElement.appendChild(townName);
-      townElement.appendChild(tagline);
       townElement.appendChild(description);
       townElement.appendChild(pdfLink);
 
-      contentWrapper.appendChild(townElement);
+      townGuidesContainer.appendChild(townElement);
     });
-  } else {
-    // Handle other modals
-    contentWrapper.innerHTML = modal.content;
+
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(title);
+    modalContent.appendChild(townGuidesContainer);
+    modal3.appendChild(modalContent);
+
+    return modal3;
   }
 
-  modalContent.appendChild(closeButton);
-  modalContent.appendChild(title);
-  modalContent.appendChild(contentWrapper);
-  modalElement.appendChild(modalContent);
+  function createModal(data) {
+    const modal = document.createElement("div");
+    modal.id = data.id;
+    modal.classList.add("modal");
 
-  return modalElement;
-}
+    const modalContent = document.createElement("div");
+    modalContent.classList.add("modal-content");
 
-// Fetch the JSON data and create the modals
-fetch('../data/guides/guides.json')
-  .then(response => response.json())
-  .then(data => {
-    var modalContainer = document.getElementById('modal-container');
-
-    data.forEach(function(modal) {
-      var modalElement = createModal(modal);
-      modalContainer.appendChild(modalElement);
+    const closeButton = document.createElement("span");
+    closeButton.classList.add("close");
+    closeButton.innerHTML = "&times;";
+    closeButton.addEventListener("click", function() {
+      modal.style.display = "none";
     });
 
-    // Add event listeners to guide elements
-    var guides = document.querySelectorAll('.guide');
-    guides.forEach(function(guide) {
-      guide.addEventListener('click', function() {
-        var modalId = this.getAttribute('data-modal');
-        var modal = document.getElementById(modalId);
-        modal.style.display = 'block';
-      });
-    });
-  })
-  .catch(error => {
-    console.log('Error fetching JSON data:', error);
-  });
+    const title = document.createElement("h2");
+    title.textContent = data.title;
+
+    const contentWrapper = document.createElement("div");
+    contentWrapper.innerHTML = data.content;
+
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(title);
+    modalContent.appendChild(contentWrapper);
+    modal.appendChild(modalContent);
+
+    return modal;
+  }
+});
